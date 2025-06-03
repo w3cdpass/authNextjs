@@ -28,8 +28,8 @@ export async function POST(req) {
         });
 
         response.cookies.set('token', token, {
-            httpOnly: false,
-            secure: false, // set to true in production (with HTTPS)
+            httpOnly: true,
+            secure: true, // set to true in production (with HTTPS)
             maxAge: 3600,
             path: '/',
         });

@@ -57,8 +57,8 @@ export async function POST(req) {
     const response = NextResponse.json({ message: 'SignUp complete', user: { id: user._id, name: user.name, email: user.email,} });
     // return NextResponse.json({message: 'User create Successfully', user}, {status: 201})
     response.cookies.set('token', token, {
-      httpOnly: false,
-      secure: false,
+      httpOnly: true,
+      secure: true,
       maxAge: 3600,
       path: '/'
     });

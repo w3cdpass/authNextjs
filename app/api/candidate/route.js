@@ -26,8 +26,8 @@ export async function POST(req) {
         await newCandidate.save();
         const response = NextResponse.json({ message: 'SignUp complete', candiates: { id: newCandidate._id, name: newCandidate.name, email: newCandidate.email } })
         response.cookies.set('token', token, {
-            httpOnly: false,
-            secure: false,
+            httpOnly: true,
+            secure: true,
             maxAge: 3600,
             path: '/'
         });
