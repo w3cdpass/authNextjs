@@ -1,6 +1,6 @@
 export default function Banner() {
     return (
-        <div className="flex justify-around w-full p-5 bg-[#008000]">
+        <div className="hidden md:flex justify-around w-full p-5  bg-[#008000]">
             <div className="w-[85%] flex justify-between  sm:text-[18px] lg:text-[20px] text-stone-50">
                 <p>Your dream job is just a click away</p>
                 <p>Have any questions? +91 8512827174</p>
