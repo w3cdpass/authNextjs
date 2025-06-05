@@ -4,6 +4,10 @@ import { jwtVerify } from 'jose';
 const JWT_SECRET = 'your-hardcoded-secret'; // Replace with env in prod
 
 export async function middleware(request) {
+  if (request.nextUrl.pathname === '/') {
+    return NextResponse.redirect(new URL('/home', request.url))
+  };
+
   const token = request.cookies.get('token')?.value;
   const { pathname } = request.nextUrl;
 
@@ -29,5 +33,5 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/user/:userid/dashboard/:path*'], // protect all /dashboard routes
+  matcher: ['/','/user/:userid/dashboard/:path*'], // protect all /dashboard routes
 };

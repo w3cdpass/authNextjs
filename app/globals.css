@@ -1,1 +1,10 @@
 @import "tailwindcss";
+.image_animation{
+  position: relative;
+  animation: mymove 2s;
+}
+
+@keyframes mymove {
+  0%   {top: 200px;}
+  100%  {top: 0px;}
+}
