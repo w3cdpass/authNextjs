@@ -397,9 +397,11 @@ export default function HomePage() {
           </p>
           <div className="flex justify-between gap-5">
             <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
-              <img
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt
+              <Image
+                src={"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"}
+                alt="this is image"
+                width={100}
+                height={100}
                 loading="lazy"
                 className="w-10 rounded-sm"
               />
@@ -416,7 +418,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-5 w-[25%] bg-gray-300 p-5 rounded-lg h-auto">
               <img
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt
+                alt="this is image"
                 loading="lazy"
                 className="w-10 rounded-sm"
               />
@@ -433,7 +435,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
               <img
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt
+                alt="this is image"
                 loading="lazy"
                 className="w-10 rounded-sm"
               />
@@ -450,7 +452,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-5 w-[25%] bg-gray-300 p-5 rounded-lg h-auto">
               <img
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt
+                alt="this is image"
                 loading="lazy"
                 className="w-10 rounded-sm"
               />
