@@ -235,7 +235,7 @@ export default function HomePage() {
                 <div className="flex gap-10 items-center justify-center carousel-inner w-full">
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/resume.png"
+                      src="/images/Resume.png"
                       alt="Resume 1"
                       width={300}
                       height={100}
@@ -244,7 +244,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/resume.png"
+                      src="/images/Resume.png"
                       alt="Resume 1"
                       width={300}
                       height={300}
@@ -253,7 +253,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/resume.png"
+                      src="/images/Resume.png"
                       alt="Resume 1"
                       width={300}
                       height={300}
@@ -262,7 +262,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/resume.png"
+                      src="/images/Resume.png"
                       alt="Resume 1"
                       width={300}
                       height={300}
@@ -271,7 +271,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/resume.png"
+                      src="/images/rRsume.png"
                       alt="Resume 1"
                       width={300}
                       height={300}
