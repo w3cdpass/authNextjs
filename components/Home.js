@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="mt-7">
             <p className="text-center">
               JobHub is a smart and easy-to-use job search platform designed to
-              help you find the right job, faster. Whether you're a fresher or
+              help you find the right job, faster. Whether {`you're`} a fresher or
               an experienced professional, JobHub connects you with verified job
               opportunities across different industries and locations in India.
               We make job hunting simple with daily job updates, one-click
