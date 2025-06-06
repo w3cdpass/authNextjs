@@ -4,9 +4,9 @@ export default function HomePage() {
   return (
     <>
       <article className="w-full flex justify-center relative bg-black text-white ">
-        <div className="w-[85%] flex justify-between items-end sm:pt-40 pt-20 ">
-          <div className="w-full pb-20">
-            <h1 className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-6xl  font-semibold leading-tight">
+        <div className="w-[85%] flex justify-between items-end sm:pt-30 lg:pt-40 pt-20 ">
+          <div className="w-[50%] max-lg:w-full max-xl:pb-10 pb-20">
+            <h1 className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-5xl xl:text-7xl font-semibold leading-tight">
               Find Your Career With{" "}
               <span className="text-green-800">JOBHUB</span>
               <span className="text-xl">.world</span>
@@ -44,7 +44,7 @@ export default function HomePage() {
                   <option>Senior Level</option>
                 </select>
 
-                <select className="max-sm:hidden border border-gray-300 p-2 rounded-md text-black text-center w-[20%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                <select className="hidden lg:hidden xl:flex sm:flex border border-gray-300 p-2 rounded-md text-black text-center w-[20%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
                   <option className="text-gray-400" disabled>
                     City
                   </option>
@@ -62,8 +62,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="max-lg:hidden flex relative">
-            <div className="h-auto block overflow-hidden">
+          <div className="w-[50%] max-lg:hidden flex relative">
+            <div className="w-full overflow-hidden flex justify-center items-center">
               <Image
                 src="/images/HeaderImage01_1.png"
                 alt="find your career with jobhub world"
@@ -123,15 +123,16 @@ export default function HomePage() {
           <div className="mt-7">
             <p className="text-center">
               JobHub is a smart and easy-to-use job search platform designed to
-              help you find the right job, faster. Whether {`you're`} a fresher or
-              an experienced professional, JobHub connects you with verified job
-              opportunities across different industries and locations in India.
-              We make job hunting simple with daily job updates, one-click
-              applications, and filters based on your skills, experience, and
-              preferred location. Our goal is to make your career journey
-              smoother by bringing the best job openings to one place — no
-              stress, no confusion, just real opportunities. Start applying
-              today and move one step closer to your dream job with JobHub.
+              help you find the right job, faster. Whether {`you're`} a fresher
+              or an experienced professional, JobHub connects you with verified
+              job opportunities across different industries and locations in
+              India. We make job hunting simple with daily job updates,
+              one-click applications, and filters based on your skills,
+              experience, and preferred location. Our goal is to make your
+              career journey smoother by bringing the best job openings to one
+              place — no stress, no confusion, just real opportunities. Start
+              applying today and move one step closer to your dream job with
+              JobHub.
             </p>
           </div>
           <a href="" className="px-5 py-2 mt-6 rounded-sm bg-green-800">
@@ -201,22 +202,22 @@ export default function HomePage() {
           <p className="text-4xl font-semibold ">
             POPULAR <span className="text-green-800 font-bold">JOBS</span>
           </p>
-          <div className="w-full grid sm:grid-cols-3   xl:grid-cols-5 grid-cols-2 gap-5">
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
+          <div className="w-full grid sm:grid-cols-3 s:  xl:grid-cols-5 grid-cols-2 gap-5">
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
+            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
           </div>
         </div>
       </section>
