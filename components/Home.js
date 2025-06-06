@@ -1,66 +1,57 @@
 import Image from "next/image";
 
 export default function HomePage() {
-    return (
-        <>
-            <article className="w-full flex justify-center relative bg-black text-white ">
-                <div className="w-[85%] flex justify-between pt-40 ">
-                    <div className="max-w-2xl">
-                        {/* Main heading */}
-                        <h1 className="text-7xl font-semibold leading-tight">
-                            Find Your Career With <span className="text-green-800">JOBHUB</span>
-                            <span className="text-xl">.world</span>
-                        </h1>
+  return (
+    <>
+      <article className="w-full flex justify-center relative bg-black text-white ">
+        <div className="w-[85%] flex justify-between items-end sm:pt-30 lg:pt-40 pt-20 ">
+          <div className="w-[50%] max-lg:w-full max-xl:pb-10 pb-20">
+            <h1 className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-5xl xl:text-7xl font-semibold leading-tight">
+              Find Your Career With{" "}
+              <span className="text-green-800">JOBHUB</span>
+              <span className="text-xl">.world</span>
+            </h1>
 
-                        {/* Subheading */}
-                        <p className="text-2xl mt-1 text-gray-600">
-                            Your dream job is just a click away
-                        </p>
+            <p className="sm:text-2xl text-1xl mt-1 text-gray-600">
+              Your dream job is just a click away
+            </p>
 
-                        {/* CTA section */}
-                        <div className="mt-5 flex items-center gap-5">
-                            {/* Employer info */}
-                            <div className="flex items-center gap-2 text-sm text-gray-500">
-                                <i className="fa-solid fa-circle-info text-xs"></i>
-                                <span>For Employer</span>
-                            </div>
+            <div className="mt-5 flex items-center gap-5">
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <i className="fa-solid fa-circle-info text-xs"></i>
+                <span>For Employer</span>
+              </div>
 
-                            {/* Hire button */}
-                            <button
-                                type="button"
-                                className="text-sm border-2 border-green-600 text-green-600 px-3 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors duration-200"
-                            >
-                                Hire Now
-                            </button>
-                        </div>
-                        <div className="mt-4 bg-white w-[75%] rounded-lg shadow-md">
-                            <div className="p-2 flex gap-3 items-center">
-                                {/* Job Title Input */}
-                                <input
-                                    type="text"
-                                    placeholder="Job Title"
-                                    className="border border-gray-300 p-2 rounded-md w-[30%] placeholder:text-black text-center focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                                />
+              <button
+                type="button"
+                className="text-sm border-2 border-green-600 text-green-600 px-3 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors duration-200"
+              >
+                Hire Now
+              </button>
+            </div>
+            <div className="mt-4 bg-white lg:w-[75%] w-full rounded-lg shadow-md">
+              <div className="p-2 flex gap-3 items-center">
+                <input
+                  type="text"
+                  placeholder="Job Title"
+                  className="border border-gray-300 p-2 rounded-md sm:w-[30%] w-full placeholder:text-black text-center focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                />
 
-                                {/* Experience Dropdown */}
-                                <select
-                                    className="border border-gray-300 p-2 rounded-md text-black text-center w-[35%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                                >
-                                    <option className="text-gray-400">Experience</option>
-                                    <option>Entry Level</option>
-                                    <option>Mid Level</option>
-                                    <option>Senior Level</option>
-                                </select>
+                <select className="max-sm:hidden border border-gray-300 p-2 rounded-md text-black text-center w-[35%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                  <option className="text-gray-400">Experience</option>
+                  <option>Entry Level</option>
+                  <option>Mid Level</option>
+                  <option>Senior Level</option>
+                </select>
 
-                                {/* City Dropdown */}
-                                <select
-                                    className="border border-gray-300 p-2 rounded-md text-black text-center  w-[20%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-                                >
-                                    <option className="text-gray-400" disabled>City</option>
-                                    <option>New York</option>
-                                    <option>San Francisco</option>
-                                    <option>Chicago</option>
-                                </select>
+                <select className="hidden lg:hidden xl:flex sm:flex border border-gray-300 p-2 rounded-md text-black text-center w-[20%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                  <option className="text-gray-400" disabled>
+                    City
+                  </option>
+                  <option>New York</option>
+                  <option>San Francisco</option>
+                  <option>Chicago</option>
+                </select>
 
                                 {/* Search Button */}
                                 <button
