@@ -235,7 +235,7 @@ export default function HomePage() {
                 <div className="flex gap-10 items-center justify-center carousel-inner w-full">
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/Resume.png"
+                      src="/images/resume.png"
                       alt="Resume 1"
                       width={300}
                       height={100}
@@ -244,10 +244,19 @@ export default function HomePage() {
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/Resume.png"
+                      src="/images/resume.png"
                       alt="Resume 1"
                       width={300}
-                      height={100}
+                      height={300}
+                      className="object-cover rounded border-b-15 border-gray-500"
+                    />
+                  </div>
+                  <div className="flex-none snap-start">
+                    <Image
+                      src="/images/resume.png"
+                      alt="Resume 1"
+                      width={300}
+                      height={300}
                       className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
@@ -256,25 +265,16 @@ export default function HomePage() {
                       src="/images/Resume.png"
                       alt="Resume 1"
                       width={300}
-                      height={100}
+                      height={300}
                       className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/Resume.png"
+                      src="/images/resume.png"
                       alt="Resume 1"
                       width={300}
-                      height={100}
-                      className="object-cover rounded border-b-15 border-gray-500"
-                    />
-                  </div>
-                  <div className="flex-none snap-start">
-                    <Image
-                      src="/images/Resume.png"
-                      alt="Resume 1"
-                      width={300}
-                      height={100}
+                      height={300}
                       className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
@@ -391,14 +391,18 @@ export default function HomePage() {
       </section>
       <section className="w-full max-lg:hidden flex justify-center py-20">
         <div className="w-[85%] flex text-center flex-col gap-5">
-          <p className="uppercase text-center max-md:text-2xl text-4xl font-semibold pb-10">Testimonials</p>
+          <p className="uppercase text-center max-md:text-2xl text-4xl font-semibold pb-10">
+            Testimonials
+          </p>
           <p className="text-2xl text-left text-gray-500">
             {`Don't`} take our word for it! <br /> Hear it from our partners.
           </p>
           <div className="flex justify-between gap-5">
             <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
               <Image
-                src={"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"}
+                src={
+                  "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                }
                 alt="this is image"
                 width={100}
                 height={100}
