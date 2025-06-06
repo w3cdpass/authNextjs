@@ -143,7 +143,7 @@ export default function HomePage() {
       <section className="w-full flex justify-center py-20">
         <div className="w-[85%] flex justify-between ">
           <div className="max-lg:w-full w-[40%]">
-            <p className="text-4xl font-semibold uppercase">
+            <p className="text-center max-md:text-2xl text-4xl font-semibold uppercase">
               What we offer to Employers
             </p>
             <div className="mt-4">
@@ -200,7 +200,7 @@ export default function HomePage() {
       </section>
       <section className="w-full flex justify-center py-20">
         <div className="flex justify-center items-center flex-col gap-25">
-          <p className="text-4xl font-semibold ">
+          <p className="text-center max-md:text-2xl text-4xl font-semibold ">
             POPULAR <span className="text-green-800 font-bold">JOBS</span>
           </p>
           <div className="w-full grid sm:grid-cols-3 s:  xl:grid-cols-5 grid-cols-2 gap-5">
@@ -225,48 +225,65 @@ export default function HomePage() {
 
       <section className="w-full flex justify-center bg-black text-white py-20 ">
         <div className="w-[85%] flex justify-center flex-col gap-20">
-          <p className="text-4xl font-semibold uppercase text-center">
+          <p className="max-md:text-2xl text-4xl font-semibold uppercase text-center">
             Build Your <span className="text-green-800 font-bold">Resume</span>{" "}
             In Two Minutes
           </p>
-          <div class="relative w-full">
-            <div class="overflow-hidden rounded-xl shadow-2xl">
-              <div class="carousel-container flex snap-x snap-mandatory overflow-x-auto">
+          <div className="relative w-full">
+            <div className="overflow-hidden rounded-xl shadow-2xl">
+              <div className="carousel-container flex snap-x snap-mandatory overflow-x-auto">
                 <div className="flex gap-10 items-center justify-center carousel-inner w-full">
-                  <div class="flex-none snap-start">
-                    <img
+                  <div className="flex-none snap-start">
+                    <Image
                       src="/images/Resume.png"
                       alt="Resume 1"
-                      class="w-full h-100 object-cover rounded border-b-15 border-gray-500"
+                      width={300}
+                      height={100}
+                      className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
-                  <div class="flex-none snap-start">
-                    <img
+                  <div className="flex-none snap-start">
+                    <Image
                       src="/images/Resume.png"
                       alt="Resume 1"
-                      class="w-full h-100 object-cover rounded border-b-15 border-gray-500"
+                      width={300}
+                      height={100}
+                      className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
-                  <div class="flex-none snap-start">
-                    <img
+                  <div className="flex-none snap-start">
+                    <Image
                       src="/images/Resume.png"
                       alt="Resume 1"
-                      class="w-full h-100 object-cover rounded border-b-15 border-gray-500"
+                      width={300}
+                      height={100}
+                      className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
-                  <div class="flex-none snap-start">
-                    <img
+                  <div className="flex-none snap-start">
+                    <Image
                       src="/images/Resume.png"
                       alt="Resume 1"
-                      class="w-full h-100 object-cover rounded border-b-15 border-gray-500"
+                      width={300}
+                      height={100}
+                      className="object-cover rounded border-b-15 border-gray-500"
+                    />
+                  </div>
+                  <div className="flex-none snap-start">
+                    <Image
+                      src="/images/Resume.png"
+                      alt="Resume 1"
+                      width={300}
+                      height={100}
+                      className="object-cover rounded border-b-15 border-gray-500"
                     />
                   </div>
                 </div>
               </div>
-              <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
+              <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
                 ❮
               </button>
-              <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
+              <button className="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
                 ❯
               </button>
             </div>
@@ -275,12 +292,12 @@ export default function HomePage() {
       </section>
       <section className="w-full flex justify-center py-20">
         <div className="w-[85%] flex justify-center items-center flex-col gap-10">
-          <p className="text-4xl font-semibold uppercase">
+          <p className="max-md:text-2xl text-4xl text-center font-semibold uppercase">
             Why We Choose{" "}
             <span className="text-green-800 font-bold">JOBHUB</span>
           </p>
-          <div className="w-full flex justify-between  items-center ">
-            <div>
+          <div className="w-full flex justify-between items-center">
+            <div className="max-md:w-full">
               <div className="flex items-center gap-1 text-xl font-semibold mb-4 ">
                 <i className="fa-solid fa-ban text-3xl text-green-500"></i>
                 <p className="border-r-5 border-green-500 rounded-xl p-3">
@@ -325,7 +342,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="max-md:hidden">
               <Image
                 src="/images/Mobile.png"
                 alt="why choose JOBHUB "
@@ -338,41 +355,43 @@ export default function HomePage() {
       </section>
       <section className="w-full flex justify-center py-20">
         <div className="w-[85%] flex justify-center items-center flex-col gap-20">
-          <p className="text-4xl font-semibold">
+          <p className="text-center max-md:text-2xl text-4xl font-semibold">
             OUR <span className="font-bold text-green-800">PARTNERS</span>
           </p>
-          <div className="flex gap-5 w-full justify-between animate-slide">
-            {[
-              "/images/companies-list/AbroadFliersLogo.png",
-              "/images/companies-list/AmCareLogo.jpeg",
-              "/images/companies-list/AebocodeLogo.png",
-              "/images/companies-list/AadiSoftLogo.jpg",
-              "/images/companies-list/FarlexLogo.jpg",
-              "/images/companies-list/FutureITLogo.png",
-              "/images/companies-list/IvsLogo.jpg",
-              "/images/companies-list/JDevelopers.png",
-              "/images/companies-list/JungleworksLogo.png",
-              "/images/companies-list/RBLLogo.png",
-              "/images/companies-list/RGGroupsLogo.png",
-              "/images/companies-list/eventHolidaysLogo.png",
-            ].map((src, index) => (
-              <div
-                key={index}
-                className="w-[70px] h-[70px] flex items-center justify-center  rounded overflow-hidden"
-              >
-                <img
-                  src={src}
-                  alt="Company logo"
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
+          <marquee direction="left">
+            <div className="flex gap-5 w-full justify-between animate-slide">
+              {[
+                "/images/companies-list/AbroadFliersLogo.png",
+                "/images/companies-list/AmCareLogo.jpeg",
+                "/images/companies-list/AebocodeLogo.png",
+                "/images/companies-list/AadiSoftLogo.jpg",
+                "/images/companies-list/FarlexLogo.jpg",
+                "/images/companies-list/FutureITLogo.png",
+                "/images/companies-list/IvsLogo.jpg",
+                "/images/companies-list/JDevelopers.png",
+                "/images/companies-list/JungleworksLogo.png",
+                "/images/companies-list/RBLLogo.png",
+                "/images/companies-list/RGGroupsLogo.png",
+                "/images/companies-list/eventHolidaysLogo.png",
+              ].map((src, index) => (
+                <div
+                  key={index}
+                  className="w-[70px] h-[70px] flex items-center justify-center  rounded overflow-hidden"
+                >
+                  <img
+                    src={src}
+                    alt="Company logo"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </marquee>
         </div>
       </section>
-      <section className="w-full flex justify-center py-20">
+      <section className="w-full max-lg:hidden flex justify-center py-20">
         <div className="w-[85%] flex text-center flex-col gap-5">
-          <p className="uppercase text-4xl font-semibold pb-10">Testimonials</p>
+          <p className="uppercase text-center max-md:text-2xl text-4xl font-semibold pb-10">Testimonials</p>
           <p className="text-2xl text-left text-gray-500">
             {`Don't`} take our word for it! <br /> Hear it from our partners.
           </p>
