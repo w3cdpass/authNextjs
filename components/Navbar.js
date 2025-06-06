@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link"
 
 import React from "react";
 
@@ -29,7 +30,7 @@ const Navbar = () => {
       <div className="w-[85%] container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="logo">
-          <a href="/">
+             <Link href="#home">
             <Image
               src="/images/Jobhub_logo.png"
               alt="Jobhub World"
@@ -37,55 +38,55 @@ const Navbar = () => {
               height={100}
               className="h-10 w-auto"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center justify-center flex-1">
           <ul className="flex gap-6 text-gray-700 font-medium">
             <li>
-              <a href="/" className="hover:text-blue-600">
+                 <Link href="/" className="hover:text-blue-600">
                 Home
-              </a>
+               </Link>
             </li>
             <li>
-              <a href="/jobs" className="hover:text-blue-600">
+                 <Link href="/jobs" className="hover:text-blue-600">
                 Jobs
-              </a>
+               </Link>
             </li>
             <li>
-              <a href="/resize" className="hover:text-blue-600">
+                 <Link href="/resize" className="hover:text-blue-600">
                 Build Resume
-              </a>
+               </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-blue-600">
+                 <Link href="/about" className="hover:text-blue-600">
                 About
-              </a>
+               </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-blue-600">
+                 <Link href="/contact" className="hover:text-blue-600">
                 Contact Us
-              </a>
+               </Link>
             </li>
           </ul>
         </div>
 
         <div className="hidden md:flex items-center">
-          <a
+             <Link
             href="/admin"
             className="text-gray-700 hover:text-blue-600 font-medium"
           >
             Admin Login
-          </a>
+           </Link>
         </div>
 
         <div className="md:hidden flex items-center gap-4">
-          <a
+             <Link
             href="/admin"
             className="text-gray-700 hover:text-blue-600 font-medium"
           >
             Admin Login
-          </a>
+           </Link>
           <button
             onClick={toggleMenu}
             className="text-gray-700 focus:outline-none"
@@ -141,45 +142,45 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col items-center gap-4 py-4 text-gray-700 font-medium">
             <li>
-              <a href="/" className="hover:text-blue-600" onClick={toggleMenu}>
+                 <Link href="/" className="hover:text-blue-600" onClick={toggleMenu}>
                 Home
-              </a>
+               </Link>
             </li>
             <li>
-              <a
+                 <Link
                 href="/jobs"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 Jobs
-              </a>
+               </Link>
             </li>
             <li>
-              <a
+                 <Link
                 href="/resize"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 Build Resume
-              </a>
+               </Link>
             </li>
             <li>
-              <a
+                 <Link
                 href="/about"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 About
-              </a>
+               </Link>
             </li>
             <li>
-              <a
+                  <Link
                 href="/contact"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 Contact Us
-              </a>
+               </Link>
             </li>
           </ul>
         </div>

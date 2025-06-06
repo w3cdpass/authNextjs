@@ -6,7 +6,7 @@ export default function HomePage() {
       <article className="w-full flex justify-center relative bg-black text-white ">
         <div className="w-[85%] flex justify-between items-end sm:pt-40 pt-20 ">
           <div className="w-full pb-20">
-            <h1 className="text-[2.6rem] sm:text-4xl md:text-7xl lg:text-6xl  font-semibold leading-tight">
+            <h1 className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-6xl  font-semibold leading-tight">
               Find Your Career With{" "}
               <span className="text-green-800">JOBHUB</span>
               <span className="text-xl">.world</span>
