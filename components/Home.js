@@ -262,7 +262,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-none snap-start">
                     <Image
-                      src="/images/Resume.png"
+                      src="/images/resume.png"
                       alt="Resume 1"
                       width={300}
                       height={300}
@@ -346,8 +346,8 @@ export default function HomePage() {
               <Image
                 src="/images/Mobile.png"
                 alt="why choose JOBHUB "
-                width={350}
-                height={350}
+                width={300}
+                height={300}
               />
             </div>
           </div>
