@@ -109,7 +109,7 @@ export default function HomePage() {
                     </div>
                     <Image src='/images/JobhubFooterlogo_1.png' alt="Start your Professional journey with JOBHUB" width={150} height={150} />
                     <div className="mt-7">
-                        <p className="text-center">JobHub is a smart and easy-to-use job search platform designed to help you find the right job, faster. Whether you're a fresher or an experienced professional, JobHub connects you with verified job opportunities across different industries and locations in India. We make job hunting simple with daily job updates, one-click applications, and filters based on your skills, experience, and preferred location. Our goal is to make your career journey smoother by bringing the best job openings to one place — no stress, no confusion, just real opportunities. Start applying today and move one step closer to your dream job with JobHub.</p>
+                        <p className="text-center">JobHub is a smart and easy-to-use job search platform designed to help you find the right job, faster. Whether{` you're`} a fresher or an experienced professional, JobHub connects you with verified job opportunities across different industries and locations in India. We make job hunting simple with daily job updates, one-click applications, and filters based on your skills, experience, and preferred location. Our goal is to make your career journey smoother by bringing the best job openings to one place — no stress, no confusion, just real opportunities. Start applying today and move one step closer to your dream job with JobHub.</p>
                     </div>
                     <a href="" className="px-5 py-2 mt-6 rounded-sm bg-green-800">Explore Jobs</a>
                 </div>
@@ -167,8 +167,129 @@ export default function HomePage() {
                         <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
                         <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
                         <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
-                        <div className="sm:p-30 p-20  bg-red-300 rounded-2xl"></div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full flex justify-center bg-black text-white py-20 ">
+                <div className="w-[85%] flex justify-center flex-col gap-20" >
+                    <p className="text-4xl font-semibold uppercase text-center">Build Your <span className="text-green-800 font-bold">Resume</span> In Two Minutes</p>
+                    <div className="flex gap-10 items-center justify-center">
+                        <div><i className="fa-solid fa-angle-left text-4xl"></i></div>
+                        <Image src='/images/Resume.png' alt="Resume 1" width={300} height={300} className="rounded border-b-15 border-gray-500" />
+                        <Image src='/images/Resume.png' alt="Resume 1" width={300} height={300} className="rounded border-b-15 border-gray-500" />
+                        <Image src='/images/Resume.png' alt="Resume 1" width={300} height={300} className="rounded border-b-15 border-gray-500" />
+                        <Image src='/images/Resume.png' alt="Resume 1" width={300} height={300} className="rounded border-b-15 border-gray-500" />
+                        <div><i className="fa-solid fa-angle-right text-4xl"></i></div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full flex justify-center py-20">
+                <div className="w-[85%] flex justify-center items-center flex-col gap-10">
+                    <p className="text-4xl font-semibold uppercase">Why We Choose <span className="text-green-800 font-bold">JOBHUB</span></p>
+                    <div className="w-full flex justify-between  items-center ">
+                        <div>
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4 ">
+                                <i className="fa-solid fa-ban text-3xl text-green-500"></i>
+                                <p className="border-r-5 border-green-500 rounded-xl p-3">No Hidden Charges</p>
+                            </div>
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4">
+                                <i className="fa-solid fa-circle-check text-3xl text-green-500"></i>
+                                <p className=" border-r-5  border-green-500 rounded-xl p-3">Verified & Authentic Jobs</p>
+                            </div>
 
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4">
+                                <i className="fa-solid fa-id-card text-green-500 text-3xl"></i>
+                                <p className=" border-r-5 border-green-500 rounded-xl p-3">No Need To Create Resume</p>
+                            </div>
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4">
+                                <i className="fa-solid fa-location-dot text-green-500 text-3xl"></i>
+                                <p className=" border-r-5 border-green-500 rounded-xl p-3">Get the Job in your Locality</p>
+                            </div>
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4">
+                                <i className="fa-solid fa-handshake text-green-500 text-3xl"></i>
+                                <p className=" border-r-5 border-green-500 rounded-xl p-3">Helping the Unorganized Sector</p>
+                            </div>
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4">
+                                <i className="fa-solid fa-headphones-simple text-green-500 text-3xl"></i>
+                                <p className="border-r-5 border-green-500 rounded-xl p-3">Get Help from our Local Representive</p>
+                            </div>
+                            <div className="flex items-center gap-1 text-xl font-semibold mb-4">
+                                <i className="fa-solid fa-person text-green-500 text-3xl"></i>
+                                <p className=" border-r-5 border-green-500 rounded-xl p-3">Easily Search Jobs in your Preferred Categoty</p>
+                            </div>
+                        </div>
+                        <div>
+                            <Image src="/images/Mobile.png" alt="why choose JOBHUB " width={350} height={350} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full flex justify-center py-20">
+                <div className="w-[85%] flex justify-center items-center flex-col gap-20">
+                    <p className="text-4xl font-semibold">OUR <span className="font-bold text-green-800">PARTNERS</span></p>
+                    <div className="flex gap-5 w-full justify-between animate-slide">
+                        {[
+                            "/images/companies-list/AbroadFliersLogo.png",
+                            "/images/companies-list/AmCareLogo.jpeg",
+                            "/images/companies-list/AebocodeLogo.png",
+                            "/images/companies-list/AadiSoftLogo.jpg",
+                            "/images/companies-list/FarlexLogo.jpg",
+                            "/images/companies-list/FutureITLogo.png",
+                            "/images/companies-list/IvsLogo.jpg",
+                            "/images/companies-list/JDevelopers.png",
+                            "/images/companies-list/JungleworksLogo.png",
+                            "/images/companies-list/RBLLogo.png",
+                            "/images/companies-list/RGGroupsLogo.png",
+                            "/images/companies-list/eventHolidaysLogo.png"
+                        ].map((src, index) => (
+                            <div key={index} className="w-[70px] h-[70px] flex items-center justify-center  rounded overflow-hidden">
+                                <img
+                                    src={src}
+                                    alt="Company logo"
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <section className="w-full flex justify-center py-20">
+                <div className="w-[85%] flex text-center flex-col gap-5">
+                    <p className="uppercase text-4xl font-semibold pb-10">Testimonials</p>
+                    <p className="text-2xl text-left text-gray-500">{`Don't`} take our word for it! <br /> Hear it from our partners.</p>
+                    <div className="flex justify-between gap-5">
+                        <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt loading="lazy" className="w-10 rounded-sm" />
+                            <p className="text-left text-3xl">{`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}</p>
+                            <div>
+                                <span>Amit Gamer</span>
+                                <p className="text-gray-400">Software Engineer, Pune</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-5 w-[25%] bg-gray-300 p-5 rounded-lg h-auto">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt loading="lazy" className="w-10 rounded-sm" />
+                            <p className="text-left text-3xl">{`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}</p>
+                            <div>
+                                <span>Amit Gamer</span>
+                                <p className="text-gray-400">Software Engineer, Pune</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt loading="lazy" className="w-10 rounded-sm" />
+                            <p className="text-left text-3xl">{`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}</p>
+                            <div>
+                                <span>Amit Gamer</span>
+                                <p className="text-gray-400">Software Engineer, Pune</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-5 w-[25%] bg-gray-300 p-5 rounded-lg h-auto">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt loading="lazy" className="w-10 rounded-sm" />
+                            <p className="text-left text-3xl">{`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}</p>
+                            <div>
+                                <span>Amit Gamer</span>
+                                <p className="text-gray-400">Software Engineer, Pune</p>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

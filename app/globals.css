@@ -8,3 +8,13 @@
   0%   {top: 200px;}
   100%  {top: 0px;}
 }
+
+
+
+.animate-slide {
+  animation: slideLeftToRight 20s linear infinite;
+}
+/* @keyframes slideLeftToRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+} */
