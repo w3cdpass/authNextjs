@@ -33,8 +33,6 @@
   }
 }
 
-
-
 .animate-slide {
   animation: slideLeftToRight 20s linear infinite;
 }
@@ -42,3 +40,23 @@
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 } */
+
+.carousel-container {
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+/* Continuous scroll animation */
+.carousel-inner {
+  animation: slide 12s infinite linear; /* Tuned for ~3s per group */
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move through original images */
+  }
+}
