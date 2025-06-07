@@ -35,9 +35,10 @@ export async function GET() {
 
         // Fetch the user from DB using decoded.id
         const user = await User.findById(decoded.id).select('name role _id');
-
+        console.log(decoded);
+        
         if (!user) {
-            return NextResponse.json({ user: null, message: 'User not found' }, { status: 404 });
+            return NextResponse.json({ user: null, message: 'Response will return null because it is Protecte !' }, { status: 404 });
         }
 
         // Return essential user info

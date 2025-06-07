@@ -22,23 +22,26 @@ const JWT_SECRET = 'your-hardcoded-secret'; // Same as in signin route
  *   - 500 if token verification fails or job fetching fails.
  */
 
-export async function GET() {
-    await connectDB();
-    const cookieStore = cookies();
-    const token = (await cookieStore).get('token')?.value;
-    if (!token) { return NextResponse.json({ message: 'Unauthorized' }, { status: 401 }) };
-    try {
-        const decoded = jwt.verify(token, JWT_SECRET)
-        if (decoded.role === 'admin') {
-            // const jobs = await Job.find({}, '-user');
-            const jobs = await Job.find().populate('user', 'name email');
-            return NextResponse.json({ success: true, job: jobs })
-        } else if (decoded.role === 'user') {
-            return NextResponse.json({ message: 'Unauthorized' })
-        }
-    } catch (error) {
-        return NextResponse.json({ success: false, message: 'Jobs not fetched' }, { status: 500 });
+export async function GET(req) {
+  const token = req.cookies.get('token')?.value;
+
+  if (!token) {
+    return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    if (decoded.role == 'user') {
+      return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
     }
+
+    await connectDB();
+    const jobs = await Job.find({}).populate('user').populate('appliedCandidates');
+    return NextResponse.json({ jobs });
+
+  } catch (err) {
+    return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
+  }
 }
 
 // POST a new job

@@ -20,11 +20,11 @@ export async function POST(req) {
             return NextResponse.json({ message: 'Invalid email or password' }, { status: 401 });
         }
 
-        const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ id: user._id, email: user.email, role: 'candidate' }, JWT_SECRET, { expiresIn: '1h' });
 
         const response = NextResponse.json({
             message: 'Login successful',
-            candidate: { id: user._id, name: user.name, email: user.email }
+            candidate: { id: user._id, name: user.name, email: user.email, role: 'candidate' }
         });
 
         response.cookies.set('token', token, {

@@ -24,11 +24,3 @@ export default function JobList() {
     </div>
   );
 }
-
-// export default function CanidateDshaboard() {
-//     return (
-//         <>
-//         <h1>Gaber</h1>
-//         </>
-//     )
-// }
