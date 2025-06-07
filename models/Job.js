@@ -1,25 +1,57 @@
 import mongoose from "mongoose";
 
-
 const JobSchema = new mongoose.Schema({
+    companyName: {
+        type: String,
+        required: true,
+        trim: true
+    },
     jobtitle: {
         type: String,
         required: true,
         trim: true
     },
-    description: {
+    contactNumber: {
         type: String,
-        required: true,
         trim: true
     },
-    numberOfPositions: {
+    jobRole: {
+        type: String,
+        trim: true
+    },
+    noPosition: {
         type: Number,
-        required: true,
         min: 1
     },
-    location: {
+    jobType: {
+        type: [String], // Array of strings
+        enum: ['Full-time', 'Part-time', 'Contract', 'Temporary', 'Internship', 'Volunteer']
+    },
+    workType: {
+        type: [String], // Array of strings
+        enum: ['On-site', 'Hybrid', 'Remote']
+    },
+    postDate: {
+        type: Date,
+        default: Date.now
+    },
+    benefits: {
+        type: [String] // Array of strings for benefits
+    },
+    salary: {
+        type: Number
+    },
+    jobLocation: {
         type: String,
-        required: true,
+        trim: true
+    },
+    appliedCandidates: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Candidates',
+        unique: true
+    }],
+    description: {
+        type: String,
         trim: true
     },
     user: {

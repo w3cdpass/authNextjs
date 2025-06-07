@@ -1,8 +1,19 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
+const educationSchema = new mongoose.Schema({
+  qualification: { type: String, trim: true },
+  fieldOfStudy: { type: String, trim: true },
+  educationProgress: { type: String, trim: true },
+  yearPass: { type: String, trim: true }
+}, { _id: false });
+
 const candidateSchema = new mongoose.Schema({
-  name: { type: String, required: [true, 'Name is required'] },
+  name: {
+    type: String,
+    required: [true, 'Name is required'],
+    trim: true
+  },
   email: {
     type: String,
     required: [true, 'Email is required'],
@@ -14,10 +25,43 @@ const candidateSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
     minlength: 6,
-    select: false // Hides password by default in queries
+    select: false
   },
+  role: {
+    type: String,
+    default: 'candidate'
+  },
+  phoneNumber: {
+    type: String,
+    trim: true
+  },
+  dob: {
+    type: Date
+  },
+  gender: {
+    type: String,
+    enum: ['Male', 'Female', 'Other']
+  },
+  address: {
+    type: String,
+    trim: true
+  },
+  education: [educationSchema],
+  fresher: {
+    type: Boolean,
+    default: true
+  },
+  experience: {
+    type: String,
+    trim: true
+  },
+  appliedJobs: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Job'
+  }]
 }, { timestamps: true });
 
+// Hash password before saving
 candidateSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   try {
@@ -29,6 +73,7 @@ candidateSchema.pre('save', async function (next) {
   }
 });
 
+// Password comparison method
 candidateSchema.methods.comparePassword = async function (candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
