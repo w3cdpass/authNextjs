@@ -26,6 +26,7 @@ export default function CandidateSignUpPagination() {
   );
 }
 
+/** old code  */
 // export function SignUpForm() {
 //   return (
 //     <>
@@ -108,6 +109,7 @@ export default function CandidateSignUpPagination() {
 //   );
 // }
 
+/** code by chat gpt */
 export function SignUpForm() {
   const [formData, setFormData] = useState({
     name: "",
