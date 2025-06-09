@@ -23,8 +23,8 @@ const JWT_SECRET = 'your-hardcoded-secret'; // Same as in signin route
  */
 
 export async function GET(req) {
-  const cookieStore = cookies();
-  const token = cookieStore.get('token')?.value;
+  const cookieStore = await cookies();
+  const token =  cookieStore.get('token')?.value;
 
   if (!token) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
