@@ -23,19 +23,24 @@ const JWT_SECRET = 'your-hardcoded-secret'; // Same as in signin route
  */
 
 export async function GET(req) {
-  const token = req.cookies.get('token')?.value;
+  const cookieStore = cookies();
+  const token = cookieStore.get('token')?.value;
 
   if (!token) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
-  await connectDB();
-  const decoded = jwt.verify(token, JWT_SECRET);
+
   try {
-    if (decoded.role === 'admin') {
+    await connectDB();
+    const decoded = jwt.verify(token, JWT_SECRET);
+    if (decoded.role === 'admin'  ) {
       const jobs = await Job.find({}).populate('user').populate('appliedCandidates');
-      return NextResponse.json({ message: 'Admin View', jobs: jobs }, { status: 200 });
+      return NextResponse.json({ message: 'Admin View', jobs }, { status: 200 });
+    } else if (decoded.role === 'candidate') {
+      const jobs = await Job.find({}).select('-appliedCandidates');
+      return NextResponse.json({message: 'Candidate View', jobs }, {status: 200})
     } else {
-      return NextResponse.json({ message: "Unauthorized" }, { status: 401 })
+      return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
     }
   } catch (err) {
     return NextResponse.json({ message: err.message }, { status: 400 });
