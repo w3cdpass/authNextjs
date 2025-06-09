@@ -28,19 +28,17 @@ export async function GET(req) {
   if (!token) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
-
+  await connectDB();
+  const decoded = jwt.verify(token, JWT_SECRET);
   try {
-    const decoded = jwt.verify(token, JWT_SECRET);
-    if (decoded.role == 'user') {
-      return NextResponse.json({ message: 'Forbidden' }, { status: 403 });
+    if (decoded.role === 'admin') {
+      const jobs = await Job.find({}).populate('user').populate('appliedCandidates');
+      return NextResponse.json({ message: 'Admin View', jobs: jobs }, { status: 200 });
+    } else {
+      return NextResponse.json({ message: "Unauthorized" }, { status: 401 })
     }
-
-    await connectDB();
-    const jobs = await Job.find({}).populate('user').populate('appliedCandidates');
-    return NextResponse.json({ jobs });
-
   } catch (err) {
-    return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
+    return NextResponse.json({ message: err.message }, { status: 400 });
   }
 }
 
@@ -58,18 +56,18 @@ export async function GET(req) {
  *   - 500 if an error occurs during job creation.
  */
 export async function POST(req) {
-    try {
-        await connectDB();
-        const body = await req.json();
+  try {
+    await connectDB();
+    const body = await req.json();
 
-        // Make sure the user ID is included in the body
-        if (!body.user) {
-            return NextResponse.json({ error: 'User ID is required' }, { status: 400 });
-        }
-
-        const job = await Job.create(body);
-        return NextResponse.json({ success: true, job, message: 'Job created successfully' }, { status: 201 });
-    } catch (err) {
-        return NextResponse.json({ error: err.message }, { status: 500 });
+    // Make sure the user ID is included in the body
+    if (!body.user) {
+      return NextResponse.json({ error: 'User ID is required' }, { status: 400 });
     }
+
+    const job = await Job.create(body);
+    return NextResponse.json({ success: true, job, message: 'Job created successfully' }, { status: 201 });
+  } catch (err) {
+    return NextResponse.json({ error: err.message }, { status: 500 });
+  }
 }

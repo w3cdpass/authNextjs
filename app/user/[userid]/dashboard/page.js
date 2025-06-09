@@ -59,7 +59,7 @@ export default function DashboardPage() {
   async function fetchAllJobs() {
     const res = await fetch('/api/jobs', { method: 'GET' });
     const data = await res.json();
-    setAllJobs(data.job);
+    setAllJobs(data.jobs);
   }
 
   useEffect(() => {
@@ -294,7 +294,8 @@ export default function DashboardPage() {
               <p>No jobs found.</p>
             ) : (
               <ul className="space-y-3">
-                {allJobs.map((job) => (
+                {console.log(allJobs)}
+                  {allJobs.map((job) => (
                   <li key={job._id} className="p-4 border rounded-lg bg-gray-100 hover:bg-gray-200">
                     <h3 className="font-bold text-lg">{job.jobtitle}</h3>
                     <p className="text-gray-700"><span className="font-semibold">Company:</span> {job.companyName}</p>

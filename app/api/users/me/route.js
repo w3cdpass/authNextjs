@@ -44,9 +44,9 @@ export async function GET() {
         // Return essential user info
         return NextResponse.json({
             user: {
+                id: user._id,
                 name: user.name,
                 role: user.role,
-                id: user._id,
             }
         });
 
