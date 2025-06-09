@@ -33,8 +33,10 @@ export async function GET(req) {
   try {
     await connectDB();
     const decoded = jwt.verify(token, JWT_SECRET);
-    if (decoded.role === 'admin'  ) {
-      const jobs = await Job.find({}).populate('user').populate('appliedCandidates');
+    if (decoded.role === 'admin') {
+      // unconventional error from this code 
+      // const jobs = await Job.find({}).populate('user').populate('appliedCandidates');
+      const jobs = await Job.find({})
       return NextResponse.json({ message: 'Admin View', jobs }, { status: 200 });
     } else if (decoded.role === 'candidate') {
       const jobs = await Job.find({}).select('-appliedCandidates');
