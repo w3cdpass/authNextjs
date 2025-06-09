@@ -1,6 +1,7 @@
 'use client';
 
 import CandidateSignUpPagination, { SignUpForm } from "@/components/CanidateSignUpPage/Pagination";
+import { useRouter } from "next/router";
 
 export default function Canidate() {
     const router = useRouter();
