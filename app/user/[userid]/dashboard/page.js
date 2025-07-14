@@ -1,10 +1,11 @@
 "use client";
-import { useParams } from 'next/navigation';
+import { useParams, useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-
 export default function DashboardPage() {
   const { userid } = useParams();
-
+  const router = useRouter()
+  const srchParams = useSearchParams()
+  const getrole = srchParams.get('role');
   const [form, setForm] = useState({
     companyName: '',
     jobtitle: '',
@@ -25,6 +26,8 @@ export default function DashboardPage() {
   const [role, setRole] = useState('');
   const [allJobs, setAllJobs] = useState([]);
 
+
+  
   // Fetch jobs created by the user
   useEffect(() => {
     async function fetchJobs() {
@@ -40,7 +43,9 @@ export default function DashboardPage() {
     if (userid) {
       fetchJobs();
     }
+
   }, [userid]);
+  
 
   useEffect(() => {
     async function fetchUser() {
@@ -68,6 +73,16 @@ export default function DashboardPage() {
     }
   }, [role]);
 
+  useEffect(() => {
+    // Basic client-side protection
+    if (!userid || !getrole) {
+      router.push('/signin')
+    }
+  }, [userid, getrole, router])
+
+  if (!userid || !getrole) {
+    return <div>Loading...</div>
+  }
   function handleChange(e) {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -294,7 +309,6 @@ export default function DashboardPage() {
               <p>No jobs found.</p>
             ) : (
               <ul className="space-y-3">
-                {console.log(allJobs)}
                   {allJobs.map((job) => (
                   <li key={job._id} className="p-4 border rounded-lg bg-gray-100 hover:bg-gray-200">
                     <h3 className="font-bold text-lg">{job.jobtitle}</h3>
