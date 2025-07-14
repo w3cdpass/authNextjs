@@ -28,9 +28,9 @@ const Navbar = () => {
   return (
     <nav className="bg-white w-full shadow-md">
       <div className="w-[85%] container mx-auto px-4 py-3 flex items-center justify-between">
-        
+
         <div className="logo">
-             <Link href="#home">
+          <Link href="/home">
             <Image
               src="/images/Jobhub_logo.png"
               alt="Jobhub World"
@@ -44,49 +44,49 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center flex-1">
           <ul className="flex gap-6 text-gray-700 font-medium">
             <li>
-                 <Link href="/" className="hover:text-blue-600">
+              <Link href="/" className="hover:text-blue-600">
                 Home
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link href="/jobs" className="hover:text-blue-600">
+              <Link href="/jobs" className="hover:text-blue-600">
                 Jobs
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link href="/resize" className="hover:text-blue-600">
+              <Link href="/resize" className="hover:text-blue-600">
                 Build Resume
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link href="/about" className="hover:text-blue-600">
+              <Link href="/about" className="hover:text-blue-600">
                 About
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link href="/contact" className="hover:text-blue-600">
+              <Link href="/contact" className="hover:text-blue-600">
                 Contact Us
-               </Link>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="hidden md:flex items-center">
-             <Link
+          <Link
             href="/admin"
             className="text-gray-700 hover:text-blue-600 font-medium"
           >
             Admin Login
-           </Link>
+          </Link>
         </div>
 
         <div className="md:hidden flex items-center gap-4">
-             <Link
+          <Link
             href="/admin"
             className="text-gray-700 hover:text-blue-600 font-medium"
           >
             Admin Login
-           </Link>
+          </Link>
           <button
             onClick={toggleMenu}
             className="text-gray-700 focus:outline-none"
@@ -109,15 +109,13 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed inset-0 bg-black/50 z-40 overlay ${
-          isOpen ? "visible" : "hidden"
-        }`}
+        className={`fixed inset-0 bg-black/50 z-40 overlay ${isOpen ? "visible" : "hidden"
+          }`}
         onClick={toggleMenu}
       >
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 mobile-menu ${
-            isOpen ? "open" : ""
-          }`}
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 mobile-menu ${isOpen ? "open" : ""
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-end p-4">
@@ -142,45 +140,45 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col items-center gap-4 py-4 text-gray-700 font-medium">
             <li>
-                 <Link href="/" className="hover:text-blue-600" onClick={toggleMenu}>
+              <Link href="/" className="hover:text-blue-600" onClick={toggleMenu}>
                 Home
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link
+              <Link
                 href="/jobs"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 Jobs
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link
+              <Link
                 href="/resize"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 Build Resume
-               </Link>
+              </Link>
             </li>
             <li>
-                 <Link
+              <Link
                 href="/about"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 About
-               </Link>
+              </Link>
             </li>
             <li>
-                  <Link
+              <Link
                 href="/contact"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
                 Contact Us
-               </Link>
+              </Link>
             </li>
           </ul>
         </div>

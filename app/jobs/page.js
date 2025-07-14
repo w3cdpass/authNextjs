@@ -4,10 +4,13 @@ import JobCard from '@/components/JobCard';
 
 export default function JobList() {
   const [jobs, setJobs] = useState([]);
-
+  
   useEffect(() => {
     const fetchJobs = async () => {
-      const res = await fetch('/api/candidate/jobs'); // Make sure this route returns all jobs
+      const res = await fetch('/api/candidate/jobs', {
+        method: 'GET',
+        credentials: "include"
+      }); // Make sure this route returns all jobs
       const data = await res.json();
       setJobs(data.jobs);
     };

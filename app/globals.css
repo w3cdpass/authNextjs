@@ -35,11 +35,12 @@
 
 .animate-slide {
   animation: slideLeftToRight 20s linear infinite;
+  overflow:hidden;
 }
-/* @keyframes slideLeftToRight {
+@keyframes slideLeftToRight {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
-} */
+}
 
 .carousel-container {
   -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
@@ -60,3 +61,68 @@
     transform: translateX(-50%); /* Move through original images */
   }
 }
+
+
+.slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideTrack {
+  display: flex;
+  width: calc(70px * 24 + 24px * 24); /* image width * count + spacing */
+  animation: scroll 30s linear infinite;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* .slider{
+  position: relative;
+  animation: slide 20s linear infinite;
+} */
+
+
+
+
+/* @keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+} */
+
+
+/* @keyframes slide3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%); 
+  }
+} */
+

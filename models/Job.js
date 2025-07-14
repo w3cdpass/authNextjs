@@ -48,7 +48,6 @@ const JobSchema = new mongoose.Schema({
     appliedCandidates: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Candidates',
-        unique: true
     }],
     description: {
         type: String,
