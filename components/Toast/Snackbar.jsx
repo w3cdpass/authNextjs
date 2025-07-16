@@ -1,4 +1,4 @@
-// components/Toast.js
+"use client";
 import { useEffect } from "react";
 
 export default function Toast({ show, message, type = "success", onClose }) {

@@ -97,8 +97,57 @@
     transform: translateX(-50%);
   }
 }
+.globaliconColor{
+  filter: invert(1) brightness(2);
+}
 
+.revertbw{
+    filter: invert(1) brightness(2);
+    rotate: 150deg;
+}
 
+.globalCateImge{
+  /* background-repeat: no-repeat; */
+  /* width: 100%; */
+  height: auto;
+  background-image: url(../public/Images/bg.png);
+  
+}
+
+.spinny {
+    animation: spin 15s linear infinite;
+}
+
+@keyframes headerslide {
+  0% {
+    border-top-left-radius: 0;
+    opacity: 0.5;
+  }
+  50% {
+    border-top-left-radius: 200px;
+    opacity: 1;
+  }
+  100% {
+    border-top-left-radius: 350px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes headerslide2 {
+  0% {
+    border-top-left-radius: 0;
+    /* opacity: 0.5; */
+  }
+  100% {
+    border-top-left-radius: 350px;
+    border-top-right-radius: 350px;
+    /* opacity: 0.8; */
+  }
+}
+
+.animateBG {
+  animation: headerslide2 1s ease-out forwards;
+}
 /* .slider{
   position: relative;
   animation: slide 20s linear infinite;
