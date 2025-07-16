@@ -14,19 +14,19 @@ import Toast from "./Toast/Snackbar";
 import Link from "next/link";
 const avatarStyles = [
   {
-    url: img1,
+    url: '/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp',
     alt: "Avatar 1",
   },
   {
-    url: img2,
+    url: '/images/MobileViewAvatar/premium_photo-1682089804117-cea5d901647f.webp',
     alt: "Avatar 2",
   },
   {
-    url: img3,
+    url: '/images/MobileViewAvatar/premium_photo-1689539137236-b68e436248de.webp',
     alt: "Avatar 2",
   },
   {
-    url: img4,
+    url: '/images/MobileViewAvatar/premium_photo-1691030256264-59cdf9414ed1.webp',
     alt: "Avatar 3",
   },
 ];
@@ -133,6 +133,8 @@ export default function HomePage() {
                 <Image
                   key={index}
                   src={user.url}
+                  width={10}
+                  height={10}
                   className=" object-cover w-6 h-6 rounded-full size-8 ring-2 ring-white dark:ring-zinc-200"
                   alt="Baic"
                 />

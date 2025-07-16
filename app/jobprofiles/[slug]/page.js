@@ -53,22 +53,22 @@ export function generateMetadata({ params }) {
 }
 
 const avatarStyles = [
-    {
-        url: img1,
-        alt: "Avatar 1",
-    },
-    {
-        url: img2,
-        alt: "Avatar 2",
-    },
-    {
-        url: img3,
-        alt: "Avatar 2",
-    },
-    {
-        url: img4,
-        alt: "Avatar 3",
-    },
+  {
+    url: '/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp',
+    alt: "Avatar 1",
+  },
+  {
+    url: '/images/MobileViewAvatar/premium_photo-1682089804117-cea5d901647f.webp',
+    alt: "Avatar 2",
+  },
+  {
+    url: '/images/MobileViewAvatar/premium_photo-1689539137236-b68e436248de.webp',
+    alt: "Avatar 2",
+  },
+  {
+    url: '/images/MobileViewAvatar/premium_photo-1691030256264-59cdf9414ed1.webp',
+    alt: "Avatar 3",
+  },
 ];
 
 const categories = [
