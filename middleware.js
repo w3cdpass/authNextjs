@@ -54,6 +54,20 @@ export async function middleware(request) {
     }
   }
 
+  if (pathname.startsWith('/jobs')) {
+    if (!token) {
+      return NextResponse.redirect(new URL('/candidatesignin', request.url))
+    }
+    try {
+      const secret = new TextEncoder().encode(JWT_SECRET);
+      await jwtVerify(token, secret);
+      return NextResponse.next(); // Valid token
+    } catch (err) {
+      console.error('JWT verification failed for candidate:', err.message);
+      return NextResponse.redirect(new URL('/candidatesignin', request.url));
+    }
+  }
+
   // Default allow
   return NextResponse.next();
 }
@@ -63,5 +77,6 @@ export const config = {
     '/',
     '/user/:userid/dashboard/:path*',
     '/canidate/:userid/dashboard/:path*',
+    '/jobs/:path*'
   ],
 };
