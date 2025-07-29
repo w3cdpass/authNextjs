@@ -124,7 +124,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-6 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:w-12 before:h-[2px] before:bg-[#008000]">
                             Subscribe
                         </h3>
-                        <p className="text-sm text-gray-400 mb-6">Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        <p className="text-sm text-gray-400 mb-6">Do{`n't`} miss to subscribe to our new feeds, kindly fill the form below.</p>
                         <form ref={formRef} onSubmit={sendEmail} className="relative">
                             <input
                                 type="email"

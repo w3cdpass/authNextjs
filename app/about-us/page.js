@@ -160,11 +160,11 @@ function page() {
                 <section className="bg-gray-50 py-16 mt-10 border-t border-gray-300">
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                            We're Here to Empower Your Career
+                        {`We're`} Here to Empower Your Career
                         </h2>
                         <p className="text-gray-600 mb-6">
                             At <strong>JobHub World</strong>, we believe in second chances, first impressions, and unlocking your full potential.
-                            Whether you're just starting out or trying again — our team is with you every step of the way.
+                            Whether yo{`u'r`}e just starting out or trying again — our team is with you every step of the way.
                         </p>
                         <p className="text-gray-600 mb-10">
                             Join thousands of candidates who’ve found their path through guided support, smart tools, and a team that genuinely cares.

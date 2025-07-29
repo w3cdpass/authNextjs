@@ -22,12 +22,12 @@ export default function contactUs() {
                     </div>
 
                     <div className="bg-gray-100 p-6 rounded-xl shadow-sm">
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">Why We're Different</h2>
+                        <h2 className="text-xl font-semibold text-gray-800 mb-4">Why W{`e'r`}e Different</h2>
                         <p className="text-sm text-gray-700 mb-2">
                             Our services are built on honesty, clarity, and practical value. We explain everything — no hidden processes, no vague answers.
                         </p>
                         <p className="text-sm text-gray-700">
-                            Whether you're a fresher or a career switcher, we make sure every step is crystal clear and tailored to your path.
+                            Whether yo{`u'r`}e a fresher or a career switcher, we make sure every step is crystal clear and tailored to your path.
                         </p>
                     </div>
                 </div>
