@@ -43,13 +43,13 @@ const logos = [
 
 // Resume sections 
 const resumes = [
-  { name: 'resume 1', path: '/images/resume/1.webp' },
-  { name: 'resume 2', path: '/images/resume/2.webp' },
-  { name: 'resume 3', path: '/images/resume/3.webp' },
-  { name: 'resume 4', path: '/images/resume/4.webp' },
-  { name: 'resume 5', path: '/images/resume/5.webp' },
-  { name: 'resume 5', path: '/images/resume/6.webp' },
-  { name: 'resume 7', path: '/images/resume/2.webp' },
+  { name: 'resume 1', path: '/images/Resume/1.webp' },
+  { name: 'resume 2', path: '/images/Resume/2.webp' },
+  { name: 'resume 3', path: '/images/Resume/3.webp' },
+  { name: 'resume 4', path: '/images/Resume/4.webp' },
+  { name: 'resume 5', path: '/images/Resume/5.webp' },
+  { name: 'resume 5', path: '/images/Resume/6.webp' },
+  { name: 'resume 7', path: '/images/Resume/2.webp' },
 
 ]
 
