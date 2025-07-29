@@ -2,10 +2,6 @@
 import Image from "next/image";
 import { gloabalTheme } from "./Theme/Theme";
 import { useRef, useState } from "react";
-import img1 from '../public/Images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'
-import img2 from '../public/Images/MobileViewAvatar/premium_photo-1682089804117-cea5d901647f.webp'
-import img3 from '../public/Images/MobileViewAvatar/premium_photo-1689539137236-b68e436248de.webp'
-import img4 from '../public/Images/MobileViewAvatar/premium_photo-1691030256264-59cdf9414ed1.webp'
 import Helper from '../public/Images/HomeImages/Helper.webp'
 import emailjs from '@emailjs/browser';
 import { jobsData } from "@/data/Jobpage";
