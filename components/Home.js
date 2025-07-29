@@ -194,21 +194,32 @@ export default function HomePage() {
                   className="border border-gray-300 p-2 rounded-md sm:w-[30%] w-full placeholder:text-black text-center focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                 />
 
-                <select className="max-sm:hidden border border-gray-300 p-2 rounded-md text-black text-center w-[35%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
-                  <option className="text-gray-400">Experience</option>
-                  <option>Entry Level</option>
-                  <option>Mid Level</option>
-                  <option>Senior Level</option>
+                <select
+                  className="max-sm:hidden border border-gray-300 p-2 rounded-md text-black text-center w-[35%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  defaultValue=""
+                >
+                  <option className="text-gray-400" value="" disabled>
+                    Experience
+                  </option>
+                  <option value="entry">Entry Level</option>
+                  <option value="mid">Mid Level</option>
+                  <option value="senior">Senior Level</option>
                 </select>
 
-                <select className="hidden lg:hidden xl:flex sm:flex border border-gray-300 p-2 rounded-md text-black text-center w-[20%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
-                  <option className="text-gray-400" disabled>
+                <select
+                  className="hidden lg:hidden xl:flex sm:flex border border-gray-300 p-2 rounded-md text-black text-center w-[20%] focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  defaultValue=""
+                >
+                  <option className="text-gray-400" value="" disabled>
                     City
                   </option>
-                  <option>New York</option>
-                  <option>San Francisco</option>
-                  <option>Chicago</option>
+                  <option value="ny">Chandigarh</option>
+                  <option value="la">Zirakpur</option>
+                  <option value="sf">Mohali</option>
+                  <option value="ch">Panchkula</option>
+                  <option value="other">Other</option>
                 </select>
+
 
                 <button
                   type="submit"
@@ -250,9 +261,9 @@ export default function HomePage() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center -mb-3">
+          <div className="flex justify-center -mb-3 mr-4">
             <div className="w-full ">
-              <Image src={'/images/HomeImages/Helper.webp'} width={500} height={500} alt="jobhub world helper image" className="w-full" />
+              <Image src={'/images/HomeImages/Helper.webp'} width={500} height={500} alt="jobhub world helper image" className="w-full " />
             </div>
           </div>
 
@@ -477,33 +488,33 @@ export default function HomePage() {
               </button>
             </div>
           </div> */}
-        <div className="relative w-full">
-  <div className="overflow-hidden rounded-xl shadow-2xl">
-    <div className="carousel-container flex snap-x snap-mandatory ">
-      <div className="flex  items-center justify-center carousel-inner w-full">
-        {[...resumes, ...resumes].map((item, index) => (
-          <div key={index} className="flex-none snap-start w-[320px] h-[310px]">
-            <div className="w-full h-full">
-              <Image
-                src={item.path}
-                alt={item.name}
-                width={300}
-                height={300}
-                className="object-cover rounded border-b-15 border-gray-500"
-              />
+          <div className="relative w-full">
+            <div className="overflow-hidden rounded-xl shadow-2xl">
+              <div className="carousel-container flex snap-x snap-mandatory ">
+                <div className="flex  items-center justify-center carousel-inner w-full">
+                  {[...resumes, ...resumes].map((item, index) => (
+                    <div key={index} className="flex-none snap-start w-[320px] h-[310px]">
+                      <div className="w-full h-full">
+                        <Image
+                          src={item.path}
+                          alt={item.name}
+                          width={300}
+                          height={300}
+                          className="object-cover rounded border-b-15 border-gray-500"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
+                ❮
+              </button>
+              <button className="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
+                ❯
+              </button>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-    <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
-      ❮
-    </button>
-    <button className="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
-      ❯
-    </button>
-  </div>
-</div>
 
         </div>
       </section>
@@ -602,7 +613,7 @@ export default function HomePage() {
           <p className="text-2xl text-left text-gray-500">
             {`Don't`} take our word for it! <br /> Hear it from our partners.
           </p>
-          <div className="flex justify-between gap-5">
+          {/* <div className="flex justify-between gap-5">
             <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
               <Image
                 src={
@@ -679,6 +690,132 @@ export default function HomePage() {
               <div>
                 <span>Amit Gamer</span>
                 <p className="text-gray-400">Software Engineer, Pune</p>
+              </div>
+            </div>
+          </div> */}
+          {/* <div className="w-full flex justify-center ">
+            <div className="w-[90%] flex justify-between gap-5 h-[60vh]">
+              <p className="w-2/6 text-left text-3xl">{
+                `"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`
+              }</p>
+              <div className="absolute rounded-br-full p-30 bg-white left-[37%] z-20"></div>
+              <div className="bg-green-300  rounded-lg h-auto w-[70%] flex flex-col justify-start items-end relative  overflow-hidden">
+                <div>
+                  <Image src="/images/jobhubFooterLogo.png" alt="jobhublogo" width={500} height={500} className="w-full"/>
+                </div>
+                <div className="absolute -right-1/4 flex items-end gap-5  h-full p-2 ">
+                  <div className="">
+                    <span className="font-medium">Amit kumar</span>
+                    <p className="text-gray-500 font-semibold">Software Engineer, Pune</p>
+                    <Image src={'/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'} width={500} height={400} alt="Testimonials" className="rounded-full w-50 h-50 object-cover " />
+                  </div>
+                  <div className="">
+                    <Image src={'/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'} width={500} height={400} alt="Testimonials" className="rounded-full w-20 h-20 object-cover " />
+                  </div>
+                  <div className="">
+                    <Image src={'/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'} width={500} height={400} alt="Testimonials" className="rounded-full w-20 h-20 object-cover " />
+                  </div>
+                  <div className="">
+                    <Image src={'/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'} width={500} height={400} alt="Testimonials" className="rounded-full w-20 h-20 object-cover " />
+                  </div>
+                  <div className="">
+                    <Image src={'/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'} width={500} height={400} alt="Testimonials" className="rounded-full w-20 h-20 object-cover " />
+                  </div>
+                  <div className="">
+                    <Image src={'/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'} width={500} height={400} alt="Testimonials" className="rounded-full w-20 h-20 object-cover " />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <div className="w-full flex justify-center ">
+            <div className="w-[90%] flex justify-between items-end">
+              <div className="bg-gray-200 w-1/4 p-2 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl" style={{ boxShadow: "2rem 32px  #bcffc2" }}>
+
+                <Image
+                  src="/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp"
+                  width={96}
+                  height={96}
+                  alt="Testimonials"
+                  className="rounded-full w-24 h-24 object-cover absolute -left-10  -bottom-12   z-20"
+                />
+
+                <div>
+                  <div className="flex items-center justify-start gap-3 mb-4 p-3">
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                  </div>
+
+                  <p className="text-2xl mb-2 text-right p-2">
+                    {`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers. JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}
+                  </p>
+
+                  <div className="text-right">
+                    <span className="font-semibold">Bottle wala</span>
+                    <p className="text-gray-400">Software Engineer, Chandigarh</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-200 w-3/10 p-2 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl" style={{ boxShadow: "2rem 32px  #bcffc2" }}>
+
+                <Image
+                  src="/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp"
+                  width={96}
+                  height={96}
+                  alt="Testimonials"
+                  className="rounded-full w-24 h-24 object-cover absolute -left-10  -bottom-12   z-20"
+                />
+
+                <div>
+                  <div className="flex items-center justify-start gap-3 mb-4 p-3">
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                  </div>
+
+                  <p className="text-2xl mb-2 text-right p-2">
+                    {`" Highly recommended for freshers. JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}
+                  </p>
+
+                  <div className="text-right">
+                    <span className="font-semibold">Bottle wala</span>
+                    <p className="text-gray-400">Software Engineer, Chandigarh</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-200 w-1/4 p-2 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl" style={{ boxShadow: "2rem 32px  #bcffc2" }}>
+
+                <Image
+                  src="/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp"
+                  width={96}
+                  height={96}
+                  alt="Testimonials"
+                  className="rounded-full w-24 h-24 object-cover absolute -left-10  -bottom-12   z-20"
+                />
+
+                <div>
+                  <div className="flex items-center justify-start gap-3 mb-4 p-3">
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
+                  </div>
+
+                  <p className="text-2xl mb-2 text-right p-2">
+                    {`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers. JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}
+                  </p>
+
+                  <div className="text-right">
+                    <span className="font-semibold">Bottle wala</span>
+                    <p className="text-gray-400">Software Engineer, Chandigarh</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
