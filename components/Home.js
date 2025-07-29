@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { gloabalTheme } from "./Theme/Theme";
 import { useRef, useState } from "react";
-import Helper from '../public/Images/HomeImages/Helper.webp'
 import emailjs from '@emailjs/browser';
 import { jobsData } from "@/data/Jobpage";
 // import jobhubFooterLogo from ''
@@ -253,7 +252,7 @@ export default function HomePage() {
           {/* Image */}
           <div className="flex justify-center -mb-3">
             <div className="w-full ">
-              <Image src={Helper} alt="jobhub world helper image" className="w-full" />
+              <Image src={'/images/HomeImages/Helper.webp'} alt="jobhub world helper image" className="w-full" />
             </div>
           </div>
 
