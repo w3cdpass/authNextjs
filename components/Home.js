@@ -252,7 +252,7 @@ export default function HomePage() {
           {/* Image */}
           <div className="flex justify-center -mb-3">
             <div className="w-full ">
-              <Image src={'/images/HomeImages/Helper.webp'} alt="jobhub world helper image" className="w-full" />
+              <Image src={'/images/HomeImages/Helper.webp'} width={500} height={500} alt="jobhub world helper image" className="w-full" />
             </div>
           </div>
 
