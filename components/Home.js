@@ -46,6 +46,18 @@ const logos = [
   "/images/companies-list/eventHolidaysLogo.png",
 ];
 
+// Resume sections 
+const resumes = [
+  { name: 'resume 1', path: '/images/resume/1.webp' },
+  { name: 'resume 2', path: '/images/resume/2.webp' },
+  { name: 'resume 3', path: '/images/resume/3.webp' },
+  { name: 'resume 4', path: '/images/resume/4.webp' },
+  { name: 'resume 5', path: '/images/resume/5.webp' },
+  { name: 'resume 5', path: '/images/resume/6.webp' },
+  { name: 'resume 7', path: '/images/resume/2.webp' },
+
+]
+
 const faqItems = [
   {
     id: 1,
@@ -111,10 +123,10 @@ export default function HomePage() {
               type="text"
               placeholder="Job Title"
               title="Search for jobs"
-              className="border border-gray-300 p-2 rounded-md sm:w-[30%] w-full placeholder:text-black text-center focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+              className="border border-gray-300 p-2 rounded-md sm:w-full w-[75%]  placeholder:text-black text-center focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
             />
             <button
-              className="button relative py-1.5 px-4 text-lg   hover:text-black border rounded cursor-pointer overflow-hidden  font-semibold"
+              className="button relative py-2 sm:py-1.5 px-4 text-[13px] sm:text-lg  hover:text-black border rounded cursor-pointer overflow-hidden  font-semibold"
               title="Search"
               style={{ backgroundColor: gloabalTheme.colors.primary }}
             // onClick={handleSearch}
@@ -133,7 +145,7 @@ export default function HomePage() {
                 <Image
                   key={index}
                   src={user.url}
-                  width={10}
+                  width={500}
                   height={10}
                   className=" object-cover w-6 h-6 rounded-full size-8 ring-2 ring-white dark:ring-zinc-200"
                   alt="Baic"
@@ -142,10 +154,10 @@ export default function HomePage() {
             </div>
             <p className="ml-2 text-sm">get hired Today!</p>
           </div>
-          <div className="mt-10">
-            <p className="text-xs">how do i apply jobs on jobhub.world?</p>
+          <div className="mt-10 text-sm">
+            <p className="">how do i apply jobs on jobhub.world?</p>
             {/* <Box className="flex sm:text-sm text-xs gap-3 py-3"> */}
-            <div className="flex gap-3 py-1 text-sm text-center"></div>
+            <div className="flex gap-5 py-1 "></div>
             <span className="bg-slate-100 p-1 rounded-md">Search Jobs <a href="#popularSection" className=" underline bg-black p-1 text-white rounded-md">here</a></span>
             <span className="bg-slate-100 p-1 rounded-md">See <span className="font-semibold   p-1 rounded-md">Joblisting</span></span>
             <span className="bg-slate-100 p-1 rounded-md">Finally <span className="font-semibold  p-1 rounded-md">fillup</span>form</span>
@@ -251,7 +263,24 @@ export default function HomePage() {
 
           {/* Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            {[1, 2, 3, 4].map((_, i) => (
+            {[
+              {
+                src: '/images/HomeImages/Search.png',
+                label: 'Smart Job Search',
+              },
+              {
+                src: '/images/HomeImages/salary.png',
+                label: 'Salary Insights',
+              },
+              {
+                src: '/images/HomeImages/Frame.png',
+                label: 'Resume Tools',
+              },
+              {
+                src: '/images/HomeImages/quickApply.png',
+                label: 'Quick Apply',
+              },
+            ].map((item, i) => (
               <div
                 key={i}
                 className="relative w-full h-40 overflow-hidden bg-white rounded-md shadow-md cursor-pointer group transition-all duration-300 ease-in-out"
@@ -261,14 +290,21 @@ export default function HomePage() {
 
                 {/* Foreground Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-2">
-                  <Image src="/icon.png" alt="icon" width={40} height={40} className="mb-2" />
+                  <Image
+                    src={item.src}
+                    alt={item.label}
+                    width={40}
+                    height={40}
+                    className="mb-2"
+                  />
                   <p className="font-bold text-gray-900 text-sm transition-colors duration-300 ease-in-out group-hover:text-white">
-                    Content {i + 1}
+                    {item.label}
                   </p>
                 </div>
               </div>
             ))}
           </div>
+
 
         </div>
       </section>
@@ -364,11 +400,11 @@ export default function HomePage() {
           <span>Process: 550</span>
         </div>
       </section>
-      <section className="w-full flex justify-center py-20">
-        <div className="flex justify-center items-center flex-col gap-25">
-          <p className="text-center max-md:text-2xl text-4xl font-semibold ">
+      <section className="w-full flex justify-center py-0 sm:py-20 ">
+        <div className="flex justify-center items-center flex-col gap-0 sm:gap-20 ">
+          <h2 className="text-center max-md:text-2xl text-4xl font-semibold " id="popularSection">
             POPULAR <span className="text-green-800 font-bold">JOBS</span>
-          </p>
+          </h2>
           {/* <div className="w-full grid sm:grid-cols-3 s:  xl:grid-cols-5 grid-cols-2 gap-5">
             <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
             <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
@@ -386,16 +422,27 @@ export default function HomePage() {
             <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
             <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
           </div> */}
-          <main className="p-10">
-            <h1 className="text-3xl font-bold mb-5">Available Job Profiles</h1>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-4">
-              {Object.entries(jobsData).map(([slug, job]) => (
+          <main className="p-5">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-4">
+              {Object.entries(jobsData).map(([slug, jobData]) => (
                 <li key={slug}>
                   <Link
                     href={`/jobprofiles/${slug}`}
-                    className="block bg-blue-100 text-blue-900 p-4 rounded-xl hover:bg-blue-200 transition"
+                    className="block capitalize bg-green-100 p-4 rounded-md hover:bg-green-200 transition text-xl font-semibold text-gray-800"
                   >
-                    {job.title}
+                    {slug.replace(/-/g, " ")}
+                    <p className="text-xs mt-3">Work Type</p>
+                    {jobData.workType.split('/').map((item, index) => (
+                      <span key={index} className="bg-white mr-1 p-1 rounded-lg text-xs text-blue-500 font-semibold border-b-2">{item}</span>
+                    ))}
+                    <hr className="mt-2" />
+                    <p className="text-xs mt-3">Required Skills</p>
+                    <div className="flex gap-1">
+                      {jobData.tags.slice(0, 3).map((items, index) => (
+                        <span key={index} className="bg-white  p-1 rounded-lg text-[10px] text-blue-500 font-semibold">{items}</span>
+                      ))}
+                    </div>
+                    <button type="button" className="bg-green-800 text-white text-xs p-1 mt-4 rounded-md cursor-pointer">Apply Now</button>
                   </Link>
                 </li>
               ))}
@@ -410,55 +457,21 @@ export default function HomePage() {
             Build Your <span className="text-green-800 font-bold">Resume</span>{" "}
             In Two Minutes
           </p>
-          <div className="relative w-full">
+          {/* <div className="relative w-full">
             <div className="overflow-hidden rounded-xl shadow-2xl">
               <div className="carousel-container flex snap-x snap-mandatory overflow-x-auto">
                 <div className="flex gap-10 items-center justify-center carousel-inner w-full">
-                  <div className="flex-none snap-start">
-                    <Image
-                      src="/images/Resume.png"
-                      alt="Resume 1"
-                      width={300}
-                      height={100}
-                      className="object-cover rounded border-b-15 border-gray-500"
-                    />
-                  </div>
-                  <div className="flex-none snap-start">
-                    <Image
-                      src="/images/Resume.png"
-                      alt="Resume 1"
-                      width={300}
-                      height={300}
-                      className="object-cover rounded border-b-15 border-gray-500"
-                    />
-                  </div>
-                  <div className="flex-none snap-start">
-                    <Image
-                      src="/images/Resume.png"
-                      alt="Resume 1"
-                      width={300}
-                      height={300}
-                      className="object-cover rounded border-b-15 border-gray-500"
-                    />
-                  </div>
-                  <div className="flex-none snap-start">
-                    <Image
-                      src="/images/Resume.png"
-                      alt="Resume 1"
-                      width={300}
-                      height={300}
-                      className="object-cover rounded border-b-15 border-gray-500"
-                    />
-                  </div>
-                  <div className="flex-none snap-start">
-                    <Image
-                      src="/images/rRsume.png"
-                      alt="Resume 1"
-                      width={300}
-                      height={300}
-                      className="object-cover rounded border-b-15 border-gray-500"
-                    />
-                  </div>
+                  {[...resumes, ...resumes].map((item, index) => (
+                  <div  key={index} className="flex-none snap-start">
+                      <Image
+                        src={item.path}
+                        alt={item.name}
+                        width={400}
+                        height={300}
+                        className="object-cover rounded border-b-15 border-gray-500"
+                      />
+                    </div>
+                    ))}
                 </div>
               </div>
               <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
@@ -468,7 +481,35 @@ export default function HomePage() {
                 ❯
               </button>
             </div>
+          </div> */}
+        <div className="relative w-full">
+  <div className="overflow-hidden rounded-xl shadow-2xl">
+    <div className="carousel-container flex snap-x snap-mandatory ">
+      <div className="flex  items-center justify-center carousel-inner w-full">
+        {[...resumes, ...resumes].map((item, index) => (
+          <div key={index} className="flex-none snap-start w-[320px] h-[310px]">
+            <div className="w-full h-full">
+              <Image
+                src={item.path}
+                alt={item.name}
+                width={300}
+                height={300}
+                className="object-cover rounded border-b-15 border-gray-500"
+              />
+            </div>
           </div>
+        ))}
+      </div>
+    </div>
+    <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
+      ❮
+    </button>
+    <button className="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
+      ❯
+    </button>
+  </div>
+</div>
+
         </div>
       </section>
       <section className="w-full flex justify-center py-20">
@@ -477,48 +518,48 @@ export default function HomePage() {
             Why We Choose{" "}
             <span className="text-green-800 font-bold">JOBHUB</span>
           </p>
-          <div className="w-full flex justify-between items-center">
+          <div className="w-full flex justify-around items-center">
             <div className="max-md:w-full">
               <div className="flex items-center gap-1 text-xl font-semibold mb-4 ">
                 <i className="fa-solid fa-ban text-3xl text-green-500"></i>
-                <p className="border-r-5 border-green-500 rounded-xl p-3">
+                <p className=" border-green-500 rounded-xl p-3">
                   No Hidden Charges
                 </p>
               </div>
               <div className="flex items-center gap-1 text-xl font-semibold mb-4">
                 <i className="fa-solid fa-circle-check text-3xl text-green-500"></i>
-                <p className=" border-r-5  border-green-500 rounded-xl p-3">
+                <p className="   border-green-500 rounded-xl p-3">
                   Verified & Authentic Jobs
                 </p>
               </div>
 
               <div className="flex items-center gap-1 text-xl font-semibold mb-4">
                 <i className="fa-solid fa-id-card text-green-500 text-3xl"></i>
-                <p className=" border-r-5 border-green-500 rounded-xl p-3">
+                <p className="  border-green-500 rounded-xl p-3">
                   No Need To Create Resume
                 </p>
               </div>
               <div className="flex items-center gap-1 text-xl font-semibold mb-4">
                 <i className="fa-solid fa-location-dot text-green-500 text-3xl"></i>
-                <p className=" border-r-5 border-green-500 rounded-xl p-3">
+                <p className="  border-green-500 rounded-xl p-3">
                   Get the Job in your Locality
                 </p>
               </div>
               <div className="flex items-center gap-1 text-xl font-semibold mb-4">
                 <i className="fa-solid fa-handshake text-green-500 text-3xl"></i>
-                <p className=" border-r-5 border-green-500 rounded-xl p-3">
+                <p className="  border-green-500 rounded-xl p-3">
                   Helping the Unorganized Sector
                 </p>
               </div>
               <div className="flex items-center gap-1 text-xl font-semibold mb-4">
                 <i className="fa-solid fa-headphones-simple text-green-500 text-3xl"></i>
-                <p className="border-r-5 border-green-500 rounded-xl p-3">
+                <p className=" border-green-500 rounded-xl p-3">
                   Get Help from our Local Representive
                 </p>
               </div>
               <div className="flex items-center gap-1 text-xl font-semibold mb-4">
                 <i className="fa-solid fa-person text-green-500 text-3xl"></i>
-                <p className=" border-r-5 border-green-500 rounded-xl p-3">
+                <p className="  border-green-500 rounded-xl p-3">
                   Easily Search Jobs in your Preferred Categoty
                 </p>
               </div>
@@ -589,11 +630,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col gap-5 w-[25%] bg-gray-300 p-5 rounded-lg h-auto">
-              <img
+              <Image
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                 alt="this is image"
                 loading="lazy"
                 className="w-10 rounded-sm"
+                width={100}
+                height={100}
               />
               <p className="text-left text-3xl">
                 {
@@ -606,11 +649,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
-              <img
+              <Image
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                 alt="this is image"
                 loading="lazy"
                 className="w-10 rounded-sm"
+                width={100}
+                height={100}
               />
               <p className="text-left text-3xl">
                 {
@@ -623,11 +668,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex flex-col gap-5 w-[25%] bg-gray-300 p-5 rounded-lg h-auto">
-              <img
+              <Image
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                 alt="this is image"
                 loading="lazy"
                 className="w-10 rounded-sm"
+                width={100}
+                height={100}
               />
               <p className="text-left text-3xl">
                 {

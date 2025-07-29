@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link"
-
+import Banner from "@/components/Banner";
 import React from "react";
 
 const Navbar = () => {
@@ -26,7 +26,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white w-full shadow-md">
+    <>
+      <Banner/>
+    <nav className="bg-white w-full shadow-md ">
       <div className="w-[85%] container mx-auto px-4 py-3 flex items-center justify-between">
 
         <div className="logo">
@@ -50,21 +52,26 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/jobs" className="hover:text-blue-600">
-                Jobs
+                Apply Jobs
               </Link>
             </li>
             <li>
-              <Link href="/resize" className="hover:text-blue-600">
-                Build Resume
+              <Link href="/interview-prepration" className="hover:text-blue-600">
+                Interview Preparation
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-blue-600">
+              <Link href="https://jobhub-resume-builder.vercel.app/" className="hover:text-blue-600" target="_blank">
+                Build Resume Quickly
+              </Link>
+            </li>
+            <li>
+              <Link href="/about-us" className="hover:text-blue-600">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-600">
+              <Link href="/contact-us" className="hover:text-blue-600">
                 Contact Us
               </Link>
             </li>
@@ -164,7 +171,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/about-us"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
@@ -173,7 +180,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="hover:text-blue-600"
                 onClick={toggleMenu}
               >
@@ -183,7 +190,8 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+      </nav>
+      </>
   );
 };
 
