@@ -53,22 +53,22 @@ export function generateMetadata({ params }) {
 }
 
 const avatarStyles = [
-  {
-    url: '/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp',
-    alt: "Avatar 1",
-  },
-  {
-    url: '/images/MobileViewAvatar/premium_photo-1682089804117-cea5d901647f.webp',
-    alt: "Avatar 2",
-  },
-  {
-    url: '/images/MobileViewAvatar/premium_photo-1689539137236-b68e436248de.webp',
-    alt: "Avatar 2",
-  },
-  {
-    url: '/images/MobileViewAvatar/premium_photo-1691030256264-59cdf9414ed1.webp',
-    alt: "Avatar 3",
-  },
+    {
+        url: '/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp',
+        alt: "Avatar 1",
+    },
+    {
+        url: '/images/MobileViewAvatar/premium_photo-1682089804117-cea5d901647f.webp',
+        alt: "Avatar 2",
+    },
+    {
+        url: '/images/MobileViewAvatar/premium_photo-1689539137236-b68e436248de.webp',
+        alt: "Avatar 2",
+    },
+    {
+        url: '/images/MobileViewAvatar/premium_photo-1691030256264-59cdf9414ed1.webp',
+        alt: "Avatar 3",
+    },
 ];
 
 const categories = [
@@ -95,7 +95,7 @@ export default function JobProfilePage({ params }) {
             <main className="p-8 max-w-6xl mx-auto">
                 <header className="mb-10 text-left">
                     <h1 className="text-5xl font-bold text-left text-gray-900">{job.title}</h1>
-                    <p className="text-lg text-left text-gray-600 mt-2  mx-auto">
+                    <p className="hidden sm:block text-lg text-left text-gray-600 mt-2  mx-auto">
                         {job.description}
                     </p>
                     {/* <div className="mt-4 flex justify-center items-center gap-4 flex-wrap">
@@ -127,6 +127,8 @@ export default function JobProfilePage({ params }) {
                                         src={user.url}
                                         className=" object-cover w-6 h-6 rounded-full size-8 ring-2 ring-white dark:ring-zinc-200"
                                         alt="Baic"
+                                        width={100}
+                                        height={100}
                                     />
                                 ))}
                             </div>
@@ -162,11 +164,13 @@ export default function JobProfilePage({ params }) {
                                 ))}
                             </div>
                         </section>
-
                         {/* <button className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-xl shadow-md transition">
                             Apply Now
                         </button> */}
                     </div>
+                </div>
+                <div className='hidden max-sm:block w-full fixed bottom-0 left-2/6'>
+                    <button className='bg-green-500 text-lg p-2 rounded-lg font-semibold '>Apply Now</button>
                 </div>
             </main>
             <div className="bg-white rounded-xl shadow-md p-6  md:p-8 border border-gray-200 max-w-3xl mx-auto">

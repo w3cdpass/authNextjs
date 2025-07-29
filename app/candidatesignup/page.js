@@ -337,14 +337,14 @@ export default function Canidate() {
                         <button
                             type="button"
                             onClick={addEducationField}
-                            className="max-sm:text-[0.7rem] w-full px-5 py-3 bg-blue-500 text-white border-none rounded flex items-center justify-center transition-colors hover:bg-blue-600"
+                            className="max-sm:text-[0.7rem] w-full px-5 py-3 bg-green-500 text-white border-none rounded flex items-center justify-center transition-colors hover:bg-green-600"
                         >
                             <span className="mr-2 text-xl ">+</span> Add Another Education
                         </button>
                     </div>
                     <div className="text-center">
                         <a
-                            className="review-btn border-solid border-b-4 rounded-sm border-b-blue-300 text-xl text-center text-blue-500"
+                            className="review-btn border-solid border-b-4 rounded-sm border-b-blue-300 text-xl text-center text-green-500"
                             href="http://search.google.com/local/writereview?placeid=ChIJtzfCMXJuNCQRkPYiWBYEXaw"
                             target="_blank"
                         >
@@ -355,7 +355,7 @@ export default function Canidate() {
                     <button
                         onClick={() => handleClick()}
                         type="submit"
-                        className="w-full p-4 bg-gradient-to-r from-blue-500 to-gray-800 text-white font-semibold rounded-lg shadow transition-shadow hover:shadow-md"
+                        className="w-full p-4 bg-gradient-to-r from-green-500 to-green-800 text-white font-semibold rounded-lg shadow transition-shadow hover:shadow-md"
                     >
                         Complete Registration
                     </button>
