@@ -64,7 +64,7 @@ function page() {
                         <div className='w-[300px] h-[500px] overflow-hidden  p-2 bg-white rounded-b-full flex items-center justify-center  '>
                             <div className='w-full h-full rounded-b-full overflow-hidden'>
                                 <Image
-                                    src='/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'
+                                    src='/images/aboutus/1.avif'
                                     alt='job'
                                     width={200}
                                     height={100}
@@ -75,7 +75,7 @@ function page() {
                         <div className='w-[220px] h-[400px] overflow-hidden rounded-full flex items-center justify-center' style={{ boxShadow: '-0.5rem -0.5rem #456882, 0.5rem 0.5rem lightgreen' }}>
                             <div className='w-full h-full rounded-full overflow-hidden'>
                                 <Image
-                                    src='/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'
+                                    src='/images/aboutus/2.avif'
                                     alt='job'
                                     width={500}
                                     height={200}
@@ -88,7 +88,7 @@ function page() {
                         <div className='w-[220px] h-[400px] overflow-hidden rounded-full flex items-center justify-center' style={{ boxShadow: '-0.5rem -0.5rem lightgreen, 0.5rem 0.5rem  #456882' }}>
                             <div className='w-full h-full rounded-full overflow-hidden'>
                                 <Image
-                                    src='/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'
+                                    src='/images/aboutus/3.avif'
                                     alt='job'
                                     width={500}
                                     height={200}
@@ -99,7 +99,7 @@ function page() {
                         <div className='w-[320px] h-[520px] overflow-hidden   rounded-t-full flex items-center justify-center'>
                             <div className='w-full h-full rounded-t-full overflow-hidden'>
                                 <Image
-                                    src='/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp'
+                                    src='/images/aboutus/4.avif'
                                     alt='job'
                                     width={500}
                                     height={200}

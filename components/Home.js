@@ -85,14 +85,60 @@ const faqItems = [
       "To update your resume, navigate to the 'Build Resume' section and select a resume template to edit your information accordingly.",
   },
 ];
+
+// testimonials
+const testimonials = [
+  {
+    name: 'Amit Kumar',
+    src: '/images/testimonial/1.avif',
+    workdesignation: 'Software Engineer, IT park, CHD',
+    feedback: 'JobHub helped me land my first developer job within two weeks! The job filters made it so easy to apply. Highly recommended for freshers.',
+  },
+  {
+    name: 'Rohit Sharma',
+    src: '/images/testimonial/3.avif',
+    workdesignation: 'Data Analyst, eClerx',
+    feedback: 'I found my dream job through JobHub! The platform is user-friendly, and the job listings are always up-to-date. The quick apply feature is a game changer.',
+  },
+  {
+    name: 'Gurpreet Singh',
+    src: '/images/testimonial/4.avif',
+    workdesignation: 'Marketing Manager, Panchkula',
+    feedback: 'The salary insights on JobHub helped me confidently negotiate a better offer. I recommend it to all professionals looking to grow in their careers.',
+  },
+  {
+    name: 'Rahul Verma',
+    src: '/images/testimonial/5.avif',
+    workdesignation: 'Graphic Designer, Mohali',
+    feedback: 'I found several creative job opportunities on JobHub that matched my design portfolio. The platform is intuitive and well-organized.',
+  },
+  {
+    name: 'Sneha Mehta',
+    src: '/images/testimonial/2.avif',
+    workdesignation: 'HR Specialist, Delhi',
+    feedback: 'JobHub made it easy to filter by company size and culture fit. I landed a role in an organization that aligns perfectly with my values.',
+  },
+  {
+    name: 'Kunal Desai',
+    src: '/images/testimonial/6.avif',
+    workdesignation: 'Frontend Developer, Chandigarh',
+    feedback: 'What I love most about JobHub is the focus on skill-matching. I was recommended jobs based on my exact tech stack — React, TypeScript, and Tailwind.',
+  }
+];
+
 export default function HomePage() {
   const [showError, setShowError] = useState(false);
   const [openId, setOpenId] = useState(null);
+  const [showtest, setShowTest] = useState(false);
 
   const toggle = (id) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
 
+  function showTestimonial() {
+    setShowTest(prev => !prev);
+  }
+  const testimonialsSlices = showtest ? testimonials.slice(0, 3) : testimonials.slice(3, 6);
   return (
     <>
       {/* Mobile view of Hero section page*/}
@@ -310,8 +356,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-
         </div>
       </section>
 
@@ -411,23 +455,6 @@ export default function HomePage() {
           <h2 className="text-center max-md:text-2xl text-4xl font-semibold " id="popularSection">
             POPULAR <span className="text-green-800 font-bold">JOBS</span>
           </h2>
-          {/* <div className="w-full grid sm:grid-cols-3 s:  xl:grid-cols-5 grid-cols-2 gap-5">
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-            <div className="sm:p-30 p-20 bg-red-300 rounded-2xl"></div>
-          </div> */}
           <main className="p-5">
             <ul className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-4">
               {Object.entries(jobsData).map(([slug, jobData]) => (
@@ -463,31 +490,7 @@ export default function HomePage() {
             Build Your <span className="text-green-800 font-bold">Resume</span>{" "}
             In Two Minutes
           </p>
-          {/* <div className="relative w-full">
-            <div className="overflow-hidden rounded-xl shadow-2xl">
-              <div className="carousel-container flex snap-x snap-mandatory overflow-x-auto">
-                <div className="flex gap-10 items-center justify-center carousel-inner w-full">
-                  {[...resumes, ...resumes].map((item, index) => (
-                  <div  key={index} className="flex-none snap-start">
-                      <Image
-                        src={item.path}
-                        alt={item.name}
-                        width={400}
-                        height={300}
-                        className="object-cover rounded border-b-15 border-gray-500"
-                      />
-                    </div>
-                    ))}
-                </div>
-              </div>
-              <button className="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
-                ❮
-              </button>
-              <button className="absolute top-1/2 right-4 -translate-y-1/2 bg-gray-900 bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 focus:outline-none transition">
-                ❯
-              </button>
-            </div>
-          </div> */}
+
           <div className="relative w-full">
             <div className="overflow-hidden rounded-xl shadow-2xl">
               <div className="carousel-container flex snap-x snap-mandatory ">
@@ -611,7 +614,7 @@ export default function HomePage() {
             Testimonials
           </p>
           <p className="text-2xl text-left text-gray-500">
-            {`Don't`} take our word for it! <br /> Hear it from our partners.
+            {`Don't`} take our word for it! <br /> Hear it from our partners and <span className="underline">Job seekers</span>.
           </p>
           {/* <div className="flex justify-between gap-5">
             <div className="flex flex-col gap-5 w-[20%] bg-gray-300 p-5 rounded-lg h-auto">
@@ -729,95 +732,48 @@ export default function HomePage() {
             </div>
           </div> */}
           <div className="w-full flex justify-center ">
-            <div className="w-[90%] flex justify-between items-end">
-              <div className="bg-gray-200 w-1/4 p-2 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl" style={{ boxShadow: "2rem 32px  #bcffc2" }}>
+            <div className="w-full flex justify-between items-end mx-auto gap-4">
+              {testimonialsSlices.map((test, index) => {
+                const isSideCard = index !== 1;
+                const cardWidth = isSideCard ? 'w-1/4' : 'w-3/10';
+                const cardShadow = isSideCard ? '1rem 20px #bcffc2' : '1rem 16px #bcffc2';
+                return (
+                  <div
+                    key={index}
+                    className={`bg-gray-200 ${cardWidth} p-4 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl transition-all duration-300`}
+                    style={{ boxShadow: cardShadow }}
+                  >
+                    <Image
+                      src={test.src}
+                      width={96}
+                      height={96}
+                      alt="Testimonials"
+                      className="rounded-full w-20 h-20 object-cover absolute -left-10 -bottom-12 z-20"
+                    />
 
-                <Image
-                  src="/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp"
-                  width={96}
-                  height={96}
-                  alt="Testimonials"
-                  className="rounded-full w-24 h-24 object-cover absolute -left-10  -bottom-12   z-20"
-                />
+                    <div className="pt-8">
+                      <div className="flex items-center justify-start gap-2 mb-4 p-3">
+                        {[...Array(5)].map((_, i) => (
+                          <i key={i} className="fa-solid fa-star text-yellow-400"></i>
+                        ))}
+                      </div>
 
-                <div>
-                  <div className="flex items-center justify-start gap-3 mb-4 p-3">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                      <p className="text-lg md:text-2xl mb-2 text-right p-2">{test.feedback}</p>
+
+                      <div className="text-right">
+                        <span className="font-semibold">{test.name}</span>
+                        <p className="text-gray-400">{test.workdesignation}</p>
+                      </div>
+                    </div>
                   </div>
+                );
+              })}
 
-                  <p className="text-2xl mb-2 text-right p-2">
-                    {`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers. JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}
-                  </p>
-
-                  <div className="text-right">
-                    <span className="font-semibold">Bottle wala</span>
-                    <p className="text-gray-400">Software Engineer, Chandigarh</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-200 w-3/10 p-2 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl" style={{ boxShadow: "2rem 32px  #bcffc2" }}>
-
-                <Image
-                  src="/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp"
-                  width={96}
-                  height={96}
-                  alt="Testimonials"
-                  className="rounded-full w-24 h-24 object-cover absolute -left-10  -bottom-12   z-20"
-                />
-
-                <div>
-                  <div className="flex items-center justify-start gap-3 mb-4 p-3">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </div>
-
-                  <p className="text-2xl mb-2 text-right p-2">
-                    {`" Highly recommended for freshers. JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}
-                  </p>
-
-                  <div className="text-right">
-                    <span className="font-semibold">Bottle wala</span>
-                    <p className="text-gray-400">Software Engineer, Chandigarh</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-200 w-1/4 p-2 flex flex-col relative rounded-tl-4xl rounded-tr-lg rounded-br-lg rounded-bl-3xl" style={{ boxShadow: "2rem 32px  #bcffc2" }}>
-
-                <Image
-                  src="/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp"
-                  width={96}
-                  height={96}
-                  alt="Testimonials"
-                  className="rounded-full w-24 h-24 object-cover absolute -left-10  -bottom-12   z-20"
-                />
-
-                <div>
-                  <div className="flex items-center justify-start gap-3 mb-4 p-3">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </div>
-
-                  <p className="text-2xl mb-2 text-right p-2">
-                    {`"JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers. JobHub helped me land first developer job within two weeks! Job filters made it so easy to apply. Highly recommended for freshers."`}
-                  </p>
-
-                  <div className="text-right">
-                    <span className="font-semibold">Bottle wala</span>
-                    <p className="text-gray-400">Software Engineer, Chandigarh</p>
-                  </div>
-                </div>
-              </div>
             </div>
+
+          </div>
+          <div onClick={showTestimonial} className=" mt-10">
+            {showtest ? (<span className="abosolute bg-green-300 p-2 rounded-lg font-medium">Previous</span>) : (<span className="abosolute bg-green-300 p-2 rounded-lg font-medium">Next</span>)}
           </div>
         </div>
       </section>
