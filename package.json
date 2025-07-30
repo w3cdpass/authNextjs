@@ -14,6 +14,7 @@
     "bcrypt": "^6.0.0",
     "canvas-confetti": "^1.9.3",
     "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.1",
     "emailjs": "^4.0.3",
     "formik": "^2.4.6",
     "jose": "^6.0.11",
