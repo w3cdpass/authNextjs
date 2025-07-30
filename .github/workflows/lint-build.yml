@@ -15,6 +15,11 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
+
+      - name: 📄 Create .env file
+        run: |
+            echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" > .env
+
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -29,5 +34,3 @@ jobs:
 
       - name: 🔨 Build project
         run: npm run build
-        env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
