@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    swcMinify: true,
+
     compiler: {
-        compiler: {
-            removeConsole: process.env.NODE_ENV === 'production',
+        removeConsole: {
+            exclude: ['error', 'warn'], // Exclude error and warn from removal
         },
     },
     images: {

@@ -128,7 +128,7 @@ export const jobsData = {
         description:
             'Join our Document Verification team and help ensure the authenticity of KYC documents, Aadhaar cards, and banking information. This role is ideal for those with attention to detail and a basic understanding of data entry. Work-from-home options available after training.',
 
-        image: '/images/jobprofile/documentverification.png',
+        image: '/images/jobprofile/2.png',
         insights: [
             'Work-from-home available after training.',
             'Hiring across India – multiple locations.',
@@ -257,7 +257,7 @@ export const jobsData = {
         description:
             'Join our Data Entry team in Zirakpur & Chandigarh. Ideal for candidates with good typing speed and attention to detail. Multiple roles open across industries like healthcare, banking, and e-commerce. Work-from-home available.',
 
-        image: '/images/jobprofile/dataentry.png',
+        image: '/images/jobprofile/3.png',
         insights: [
             '500+ openings across Zirakpur & Chandigarh.',
             'Work-from-home & office roles available.',
@@ -377,7 +377,7 @@ export const jobsData = {
         description:
             'Design intuitive and visually stunning user interfaces across web and mobile platforms. Collaborate with startups and agencies via JobHub.world. Great for creative minds with Figma, Adobe XD, and UI/UX skills. Remote and freelance roles available.',
 
-        image: '/images/jobprofile/webdesigner.png',
+        image: '/images/jobprofile/4.png',
         insights: [
             '1500+ openings across India.',
             'Remote, freelance, and office-based roles.',
@@ -487,7 +487,7 @@ export const jobsData = {
         description:
             'Create stunning visuals for branding, marketing, and digital campaigns. Openings in Chandigarh, Zirakpur, Mohali, and Panchkula. Great opportunity for Adobe Photoshop/Illustrator experts. Work full-time, part-time, or freelance.',
 
-        image: '/images/jobprofile/graphicdesigner.png',
+        image: '/images/jobprofile/5.png',
         insights: [
             '800+ roles available across Tricity.',
             'Portfolio and design test may be required.',
@@ -644,7 +644,7 @@ export const jobsData = {
         description:
             'Join 2000+ openings for Full-stack, Front-end, and Back-end developers across India. Work on React, Node.js, PHP, Django, and more. Remote and on-site roles available via JobHub.world.',
 
-        image: '/images/jobprofile/webdeveloper.png',
+        image: '/images/jobprofile/6.png',
         insights: [
             '2000+ jobs across India & remote.',
             'Popular stacks: MERN, MEAN, LAMP, Django.',
@@ -757,7 +757,7 @@ export const jobsData = {
         description:
             'Join 2500+ job openings for Civil Engineers, Electricians, Masons, and Construction Laborers across India. From residential to commercial and infrastructure projects. Apply now with or without experience.',
 
-        image: '/images/jobprofile/construction.png',
+        image: '/images/jobprofile/7.png',
         insights: [
             '2500+ active construction job listings.',
             'Openings for Civil Engineers, Electricians, Masons & Labor.',
@@ -886,7 +886,7 @@ export const jobsData = {
         description:
             'Explore 1200+ front office and receptionist jobs across India. Immediate hiring for males and females in hotels, hospitals, offices, and corporate settings. Apply now and start your career in administration!',
 
-        image: '/images/jobprofile/front-office.png',
+        image: '/images/jobprofile/8.png',
         insights: [
             '1200+ active job listings across India.',
             'Receptionist, Admin Executive, and Front Desk roles.',
@@ -1017,7 +1017,7 @@ export const jobsData = {
         description:
             'Explore 1800+ back office job opportunities across India, including data entry, admin support, and MIS executive roles. Work from home and office-based jobs available. Apply today with basic computer skills!',
 
-        image: '/images/jobprofile/back-office.png',
+        image: '/images/jobprofile/9.png',
         insights: [
             '1800+ active jobs in back office and support roles.',
             'Roles include Data Entry, Admin Support, MIS Executive.',
@@ -1143,7 +1143,7 @@ export const jobsData = {
         description:
             'Find 900+ housekeeping jobs in hotels, hospitals, and corporate facilities. Hiring room attendants, cleaners, and supervisors with salaries up to ₹35K/month. Apply now for immediate joining and free accommodation at select jobs.',
 
-        image: '/images/jobprofile/housekeeping.png',
+        image: '/images/jobprofile/10.png',
         insights: [
             '900+ active housekeeping roles across India.',
             'Jobs available in hotels, hospitals, offices & commercial buildings.',
@@ -1272,7 +1272,7 @@ export const jobsData = {
         description:
             'Explore 3000+ delivery and transport job openings in India across food, grocery, courier, and logistics sectors. Roles for bike riders, truck drivers & couriers. Salary ₹15K–50K/month with flexible shifts. Apply today!',
 
-        image: '/images/jobprofile/delivery.png',
+        image: '/images/jobprofile/11.png',
         insights: [
             '3000+ openings across food, grocery, logistics, and courier delivery.',
             'Roles available for bike riders, auto drivers, truck operators, and last-mile delivery agents.',
@@ -1402,7 +1402,7 @@ export const jobsData = {
         description:
             '🛡️ 1500+ security guard jobs across hotels, malls, IT parks & residential societies. Salary ₹12K-40K/month. Ex-servicemen preferred but freshers can apply. Immediate hiring. Apply now!',
 
-        image: '/images/jobprofile/securityguard.png',
+        image: '/images/jobprofile/12.png',
         insights: [
             '1500+ openings for unarmed guards, armed guards, and supervisors.',
             'Ex-servicemen preferred but many roles open to freshers.',
@@ -1539,7 +1539,7 @@ export const jobsData = {
         description:
             '🏨 2000+ hotel staff jobs across front office, housekeeping, F&B service, chef & management roles. Salary ₹12K-80K/month with free accommodation and meals at most hotels. Apply today!',
 
-        image: '/images/jobprofile/hotelstaff.png',
+        image: '/images/jobprofile/13.png',
         insights: [
             'Jobs available in leading hotel chains including Taj, Oberoi, Marriott, and more.',
             'Roles include receptionists, chefs, waiters, housekeeping staff, and management.',
@@ -1674,7 +1674,7 @@ export const jobsData = {
         description:
             '📦 1800+ warehouse staff jobs including packers, loaders, forklift operators with ₹12K-45K/month salary. Amazon/Flipkart vendors hiring urgently. Immediate openings, apply today!',
 
-        image: '/images/jobprofile/warehousestaff.png',
+        image: '/images/jobprofile/14.png',
         insights: [
             'Hiring for major e-commerce warehouses including Amazon & Flipkart vendors.',
             'Roles include Packers, Loaders, Forklift Operators, Inventory & Supervisors.',
@@ -1811,7 +1811,7 @@ export const jobsData = {
         description:
             '🏭 2500+ Factory Worker Jobs | Machine Operators, Assemblers, Packers | ₹12K-50K/month | Textile, Automotive, FMCG Factories Hiring | Apply Today!',
 
-        image: '/images/jobprofile/factoryworker.png',
+        image: '/images/jobprofile/15.png',
         insights: [
             'Urgent hiring in manufacturing units across textiles, automotive, FMCG sectors.',
             'Positions available for Machine Operators, Assemblers, Quality Inspectors, Packers.',
@@ -1944,142 +1944,142 @@ export const jobsData = {
     },
 
     // Factory worker profile and it's all meta data and the contene inside the site
-    factoryworker: {
-        title: 'Factory Worker Jobs | Production & Manufacturing Roles',
-        description:
-            '🏭 2500+ Factory Worker Jobs | Machine Operators, Assemblers, Packers | ₹12K-50K/month | Textile, Automotive, FMCG Factories Hiring | Apply Today!',
+    // factoryworker: {
+    //     title: 'Factory Worker Jobs | Production & Manufacturing Roles',
+    //     description:
+    //         '🏭 2500+ Factory Worker Jobs | Machine Operators, Assemblers, Packers | ₹12K-50K/month | Textile, Automotive, FMCG Factories Hiring | Apply Today!',
 
-        image: '/images/jobprofile/factoryworker.png',
-        insights: [
-            'Urgent hiring in manufacturing units across textiles, automotive, FMCG sectors.',
-            'Positions available for Machine Operators, Assemblers, Quality Inspectors, Packers.',
-            'Overtime pay and shift allowances offered.',
-            'Freshers will receive on-job training.',
-            'Multiple locations across India.',
-        ],
-        tags: [
-            'Factory Jobs',
-            'Production Worker',
-            'Machine Operator',
-            'Assembly Line Jobs',
-            'Textile Factory Jobs',
-            'FMCG Factory Jobs',
-            'Automotive Factory Jobs',
-            'Packaging Jobs',
-            'Fresher Factory Jobs',
-            'Industrial Jobs',
-        ],
-        location: 'Multiple Locations Across India',
-        salary: '₹12,000 - ₹50,000/month',
+    //     image: '/images/jobprofile/factoryworker.png',
+    //     insights: [
+    //         'Urgent hiring in manufacturing units across textiles, automotive, FMCG sectors.',
+    //         'Positions available for Machine Operators, Assemblers, Quality Inspectors, Packers.',
+    //         'Overtime pay and shift allowances offered.',
+    //         'Freshers will receive on-job training.',
+    //         'Multiple locations across India.',
+    //     ],
+    //     tags: [
+    //         'Factory Jobs',
+    //         'Production Worker',
+    //         'Machine Operator',
+    //         'Assembly Line Jobs',
+    //         'Textile Factory Jobs',
+    //         'FMCG Factory Jobs',
+    //         'Automotive Factory Jobs',
+    //         'Packaging Jobs',
+    //         'Fresher Factory Jobs',
+    //         'Industrial Jobs',
+    //     ],
+    //     location: 'Multiple Locations Across India',
+    //     salary: '₹12,000 - ₹50,000/month',
 
-        responsibilities: [
-            'Operate machinery and production equipment.',
-            'Assemble products on the production line.',
-            'Inspect quality of finished goods.',
-            'Maintain safety standards and follow procedures.',
-            'Package and prepare products for shipment.',
-        ],
+    //     responsibilities: [
+    //         'Operate machinery and production equipment.',
+    //         'Assemble products on the production line.',
+    //         'Inspect quality of finished goods.',
+    //         'Maintain safety standards and follow procedures.',
+    //         'Package and prepare products for shipment.',
+    //     ],
 
-        qualifications: [
-            'Basic physical fitness for factory work.',
-            'Ability to learn and operate production machinery.',
-            'Attention to detail for quality control.',
-            'Willingness to work shifts including overtime.',
-            'No prior experience necessary; training provided.',
-        ],
+    //     qualifications: [
+    //         'Basic physical fitness for factory work.',
+    //         'Ability to learn and operate production machinery.',
+    //         'Attention to detail for quality control.',
+    //         'Willingness to work shifts including overtime.',
+    //         'No prior experience necessary; training provided.',
+    //     ],
 
-        benefits: [
-            'Overtime pay and shift allowance.',
-            'Safety training and protective equipment provided.',
-            'Opportunities for full-time, part-time, and contract roles.',
-            'Work across reputed manufacturing companies.',
-        ],
+    //     benefits: [
+    //         'Overtime pay and shift allowance.',
+    //         'Safety training and protective equipment provided.',
+    //         'Opportunities for full-time, part-time, and contract roles.',
+    //         'Work across reputed manufacturing companies.',
+    //     ],
 
-        workType: 'Full-Time / Part-Time / Contract',
-        shift: 'Flexible shifts with overtime',
+    //     workType: 'Full-Time / Part-Time / Contract',
+    //     shift: 'Flexible shifts with overtime',
 
-        metadata: {
-            title: 'Factory Worker Jobs | Production & Manufacturing Roles - JobHub.world',
-            description:
-                '🏭 2500+ Factory Worker Jobs | Machine Operators, Assemblers, Packers | ₹12K-50K/month | Textile, Automotive, FMCG Factories Hiring | Apply Today!',
-            keywords:
-                'factory jobs, production worker jobs, machine operator jobs, assembly line jobs, textile factory jobs, FMCG factory jobs, automotive factory jobs, packaging jobs, fresher factory jobs, industrial jobs',
-            author: "JobHub.world - India's Leading Manufacturing Job Platform",
-            canonical: 'https://www.jobhub.world/factory',
-            og: {
-                title: '⚙️ 2500+ Factory Worker Jobs - Immediate Hiring | JobHub.world',
-                description:
-                    'Urgent openings in manufacturing units: Machine Operators (₹15K-35K), Assemblers (₹12K-25K), Quality Inspectors (₹18K-40K). Overtime pay available. Freshers trained.',
-                image: 'https://www.jobhub.world/images/og/factory-jobs-og.jpg',
-                url: 'https://www.jobhub.world/factory',
-            },
-            twitter: {
-                title: 'Factory Worker Jobs - Production & Assembly Roles',
-                description: '2500+ manufacturing jobs available with overtime pay. #FactoryJobs #IndustrialJobs',
-                image: 'https://www.jobhub.world/images/twitter/factory-jobs-card.jpg',
-            },
-        },
+    //     metadata: {
+    //         title: 'Factory Worker Jobs | Production & Manufacturing Roles - JobHub.world',
+    //         description:
+    //             '🏭 2500+ Factory Worker Jobs | Machine Operators, Assemblers, Packers | ₹12K-50K/month | Textile, Automotive, FMCG Factories Hiring | Apply Today!',
+    //         keywords:
+    //             'factory jobs, production worker jobs, machine operator jobs, assembly line jobs, textile factory jobs, FMCG factory jobs, automotive factory jobs, packaging jobs, fresher factory jobs, industrial jobs',
+    //         author: "JobHub.world - India's Leading Manufacturing Job Platform",
+    //         canonical: 'https://www.jobhub.world/factory',
+    //         og: {
+    //             title: '⚙️ 2500+ Factory Worker Jobs - Immediate Hiring | JobHub.world',
+    //             description:
+    //                 'Urgent openings in manufacturing units: Machine Operators (₹15K-35K), Assemblers (₹12K-25K), Quality Inspectors (₹18K-40K). Overtime pay available. Freshers trained.',
+    //             image: 'https://www.jobhub.world/images/og/factory-jobs-og.jpg',
+    //             url: 'https://www.jobhub.world/factory',
+    //         },
+    //         twitter: {
+    //             title: 'Factory Worker Jobs - Production & Assembly Roles',
+    //             description: '2500+ manufacturing jobs available with overtime pay. #FactoryJobs #IndustrialJobs',
+    //             image: 'https://www.jobhub.world/images/twitter/factory-jobs-card.jpg',
+    //         },
+    //     },
 
-        structuredData: [
-            {
-                "@context": "https://schema.org",
-                "@type": "JobPosting",
-                "title": "Factory Worker",
-                "description": "Production, assembly and quality control roles in manufacturing facilities across industries including textiles, automotive and consumer goods.",
-                "hiringOrganization": {
-                    "@type": "Organization",
-                    "name": "JobHub.world",
-                    "sameAs": "https://www.jobhub.world",
-                    "logo": "https://www.jobhub.world/Jobhub%20logo.png"
-                },
-                "industry": "Manufacturing",
-                "jobLocation": {
-                    "@type": "Place",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Multiple Locations",
-                        "addressRegion": "India",
-                        "addressCountry": "IN"
-                    }
-                },
-                "baseSalary": {
-                    "@type": "MonetaryAmount",
-                    "currency": "INR",
-                    "value": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 12000,
-                        "maxValue": 50000,
-                        "unitText": "MONTH"
-                    }
-                },
-                "jobBenefits": "Overtime Pay, Shift Allowance, Safety Training",
-                "datePosted": "2025-07-23",
-                "validThrough": "2025-10-23",
-                "employmentType": ["FULL_TIME", "PART_TIME", "CONTRACT"],
-                "experienceRequirements": {
-                    "@type": "OccupationalExperienceRequirements",
-                    "monthsOfExperience": 0
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Industrial Jobs",
-                        "item": "https://www.jobhub.world/factory"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Factory Worker Jobs",
-                        "item": "https://www.jobhub.world/factory"
-                    }
-                ]
-            }
-        ]
-    },
+    //     structuredData: [
+    //         {
+    //             "@context": "https://schema.org",
+    //             "@type": "JobPosting",
+    //             "title": "Factory Worker",
+    //             "description": "Production, assembly and quality control roles in manufacturing facilities across industries including textiles, automotive and consumer goods.",
+    //             "hiringOrganization": {
+    //                 "@type": "Organization",
+    //                 "name": "JobHub.world",
+    //                 "sameAs": "https://www.jobhub.world",
+    //                 "logo": "https://www.jobhub.world/Jobhub%20logo.png"
+    //             },
+    //             "industry": "Manufacturing",
+    //             "jobLocation": {
+    //                 "@type": "Place",
+    //                 "address": {
+    //                     "@type": "PostalAddress",
+    //                     "addressLocality": "Multiple Locations",
+    //                     "addressRegion": "India",
+    //                     "addressCountry": "IN"
+    //                 }
+    //             },
+    //             "baseSalary": {
+    //                 "@type": "MonetaryAmount",
+    //                 "currency": "INR",
+    //                 "value": {
+    //                     "@type": "QuantitativeValue",
+    //                     "minValue": 12000,
+    //                     "maxValue": 50000,
+    //                     "unitText": "MONTH"
+    //                 }
+    //             },
+    //             "jobBenefits": "Overtime Pay, Shift Allowance, Safety Training",
+    //             "datePosted": "2025-07-23",
+    //             "validThrough": "2025-10-23",
+    //             "employmentType": ["FULL_TIME", "PART_TIME", "CONTRACT"],
+    //             "experienceRequirements": {
+    //                 "@type": "OccupationalExperienceRequirements",
+    //                 "monthsOfExperience": 0
+    //             }
+    //         },
+    //         {
+    //             "@type": "BreadcrumbList",
+    //             "itemListElement": [
+    //                 {
+    //                     "@type": "ListItem",
+    //                     "position": 1,
+    //                     "name": "Industrial Jobs",
+    //                     "item": "https://www.jobhub.world/factory"
+    //                 },
+    //                 {
+    //                     "@type": "ListItem",
+    //                     "position": 2,
+    //                     "name": "Factory Worker Jobs",
+    //                     "item": "https://www.jobhub.world/factory"
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
 
 
     /**
