@@ -7,9 +7,9 @@ export default function Banner() {
                 <p>Your dream job is just a click away</p>
                 <p>Have any questions? +91 8512827174</p>
                 <div className="flex gap-4 ">
-                    <Link href=""><i className="fa-brands fa-facebook-f" /></Link>
-                    <Link href=""><i className="fa-brands fa-linkedin-in" /></Link>
-                    <Link href=""><i className="fa-brands fa-instagram" /></Link>
+                    <Link href="https://www.facebook.com/people/JobHubworld/61575148695953/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f" /></Link>
+                    <Link href="https://www.linkedin.com/in/jobhub-world-5559a7361/" target="_blank"><i className="fa-brands fa-linkedin-in" /></Link>
+                    <Link href="https://www.instagram.com/jobhub_world?igsh=a2hsb3dmdDV1azYw" target="_blank"><i className="fa-brands fa-instagram" /></Link>
                 </div>
             </div>
         </div>

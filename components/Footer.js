@@ -82,13 +82,13 @@ const Footer = () => {
                         </p>
                         <span className="text-lg font-bold block mb-3">Follow us</span>
                         <div className="flex gap-4">
-                            <Link href="https://facebook.com/..." target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#008000] hover:bg-[#006600] transition-colors">
+                            <Link href="https://www.facebook.com/people/JobHubworld/61575148695953/" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#008000] hover:bg-[#006600] transition-colors">
                                 <i className="fab fa-facebook-f text-white" />
                             </Link>
-                            <Link href="https://linkedin.com/..." target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#008000] hover:bg-[#006600] transition-colors">
+                            <Link href="https://www.linkedin.com/in/jobhub-world-5559a7361/" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#008000] hover:bg-[#006600] transition-colors">
                                 <i className="fab fa-linkedin-in text-white" />
                             </Link>
-                            <Link href="https://instagram.com/..." target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#008000] hover:bg-[#006600] transition-colors">
+                            <Link href="https://www.instagram.com/jobhub_world?igsh=a2hsb3dmdDV1azYw" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#008000] hover:bg-[#006600] transition-colors">
                                 <i className="fab fa-instagram text-white" />
                             </Link>
                         </div>
@@ -101,11 +101,13 @@ const Footer = () => {
                         </h3>
                         <ul className="flex flex-wrap">
                             {[
-                                ['/', 'Home'], ['/about', 'About'], ['/contact', 'Contact us'],
-                                ['/#popularSection', 'Find a job'], ['/verification', 'Hire Now'],
-                                ['/Privacypolicy', 'Privacy Policy'], ['/Termsandconditions', 'T&C'],
-                                ['/interviewtips', 'Interview Tips'], ['/events', 'Events'],
-                                ['/candidatedashboard', 'Jobs']
+                                ['/', 'Home'], ['/about-us', 'About us'], ['/contact-us', 'Contact us'],
+                                ['/#popularSection', 'Find a job'],
+                                // ['/verification', 'Hire Now'],
+                                // ['/Privacypolicy', 'Privacy Policy'], ['/Termsandconditions', 'T&C'],
+                                ['/interview-prepration', 'Interview Prepration'],
+                                // ['/events', 'Events'],
+                                ['/jobs', 'Jobs']
                             ].map(([href, label], i) => (
                                 <li key={i} className="w-1/2 mb-3">
                                     <Link
