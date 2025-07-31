@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link"
 import Banner from "@/components/Banner";
 import React from "react";
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-
+const location = usePathname();
   // Toggle menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -24,7 +25,6 @@ const Navbar = () => {
     handleResize(); // Initial check
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   return (
     <>
       <Banner />
@@ -47,25 +47,25 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden xl:flex items-center justify-center flex-1">
             <ul className="flex gap-6 text-gray-700 font-medium text-xs sm:text-sm md:text-base lg:text-lg">
-              <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+              <li><Link href="/" className={`hover:text-green-600 hover:border-b-2 border-black ${location === '/' ? `text-green-600` : ``}`}>Home</Link></li>
               {/* <li><Link href="/jobs" className="hover:text-blue-600">Apply Jobs</Link></li> */}
-              <li><Link href="/interview-prepration" className="hover:text-blue-600">Interview Preparation</Link></li>
-              <li><Link href="https://jobhub-resume-builder.vercel.app/" target="_blank" className="hover:text-blue-600">Build Resume Quickly</Link></li>
-              <li><Link href="/about-us" className="hover:text-blue-600">About</Link></li>
-              <li><Link href="/contact-us" className="hover:text-blue-600">Contact Us</Link></li>
+              <li><Link href="/interview-prepration" className={`hover:text-green-600 hover:border-b-2 border-black ${location === '/interview-prepration' ? `text-green-600` : ``}`}>Interview Preparation</Link></li>
+              <li><Link href="https://jobhub-resume-builder.vercel.app" target="_blank" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='https://jobhub-resume-builder.vercel.app'? `text-green-600` : ``}`}>Build Resume Quickly</Link></li>
+              <li><Link href="/about-us" className={`hover:text-green-600 hover:border-b-2 border-black ${location === '/about-us'? `text-green-600` : ``}`}>About</Link></li>
+              <li><Link href="/contact-us" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/contact-us' ? `text-green-600` : ``}`}>Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Desktop Admin Link */}
           <div className="hidden xl:flex items-center">
-            <Link href="/admin" className="text-gray-700 hover:text-blue-600 font-medium text-xs sm:text-sm md:text-base">
+            <Link href="/admin" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/admin' ? `text-green-600` : ``}`}>
               Admin Login
             </Link>
           </div>
 
           {/* Mobile Menu Toggle + Admin */}
           <div className="xl:hidden flex items-center gap-4">
-            <Link href="/admin" className="text-gray-700 hover:text-blue-600 font-medium text-sm">
+            <Link href="/admin" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/admin' ? `text-green-600` : `text-black`}`}>
               Admin Login
             </Link>
             <button
