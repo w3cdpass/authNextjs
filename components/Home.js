@@ -7,6 +7,7 @@ import { jobsData } from "@/data/Jobpage";
 // import jobhubFooterLogo from ''
 import Toast from "./Toast/Snackbar";
 import Link from "next/link";
+import Typewriter from "./Typewriter";
 const avatarStyles = [
   {
     url: '/images/MobileViewAvatar/premium_photo-1682089787056-9ac0c78a2ac2.webp',
@@ -209,8 +210,9 @@ export default function HomePage() {
       <article className="flex w-full max-sm:hidden justify-center relative bg-black text-white ">
         <div className="w-[85%] flex justify-between items-end sm:pt-30 lg:pt-40 pt-20 ">
           <div className="w-[50%] max-lg:w-full max-xl:pb-10 pb-20">
-            <h1 className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-5xl xl:text-7xl font-semibold leading-tight">
-              Find Your Career With{" "}
+            <h1 className="text-[4rem] font-semibold">
+              <Typewriter/>
+              <span className="">With</span>
               <span className="text-green-800">JOBHUB</span>
               <span className="text-xl">.world</span>
             </h1>
@@ -387,7 +389,7 @@ export default function HomePage() {
               JobHub.
             </p>
           </div>
-          <a href="" className="px-5 py-2 mt-6 rounded-sm bg-green-800">
+          <a href="#popularSection" className="px-5 py-2 mt-6 rounded-sm bg-green-800">
             Explore Jobs
           </a>
         </div>
@@ -781,11 +783,11 @@ export default function HomePage() {
 
         <div className="w-[85%]">
           <p className="text-center max-md:text-2xl text-4xl font-semibold pb-4">
-            Frequently asked<span className="font-bold text-green-800 ">questions</span>
+            Frequently asked <span className="font-bold text-green-800 ">questions</span>
           </p>
-          <div className=" max-w-4xl mx-auto ">
+          <div className=" max-w-5xl mx-auto ">
             {faqItems.map(({ id, question, answer }) => (
-              <div key={id} className="border-b border-gray-300 py-4 cursor-pointer">
+              <div key={id} className="border mb-2 p-2 rounded-sm border-gray-300 py-4 cursor-pointer">
                 <h3
                   className="text-lg font-semibold"
                   onClick={() => toggle(id)}

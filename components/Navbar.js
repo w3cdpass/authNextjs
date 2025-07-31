@@ -48,7 +48,7 @@ const Navbar = () => {
           <div className="hidden xl:flex items-center justify-center flex-1">
             <ul className="flex gap-6 text-gray-700 font-medium text-xs sm:text-sm md:text-base lg:text-lg">
               <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
-              <li><Link href="/jobs" className="hover:text-blue-600">Apply Jobs</Link></li>
+              {/* <li><Link href="/jobs" className="hover:text-blue-600">Apply Jobs</Link></li> */}
               <li><Link href="/interview-prepration" className="hover:text-blue-600">Interview Preparation</Link></li>
               <li><Link href="https://jobhub-resume-builder.vercel.app/" target="_blank" className="hover:text-blue-600">Build Resume Quickly</Link></li>
               <li><Link href="/about-us" className="hover:text-blue-600">About</Link></li>
@@ -107,7 +107,7 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col items-start gap-4 p-4 text-gray-700 font-medium text-sm">
               <li><Link href="/" onClick={toggleMenu} className="hover:text-blue-600">Home</Link></li>
-              <li><Link href="/jobs" onClick={toggleMenu} className="hover:text-blue-600">Jobs</Link></li>
+              {/* <li><Link href="/jobs" onClick={toggleMenu} className="hover:text-blue-600">Jobs</Link></li> */}
               <li><Link href="https://jobhub-resume-builder.vercel.app/" target="_blank" onClick={toggleMenu} className="hover:text-blue-600">Build Resume</Link></li>
               <li><Link href="/interview-prepration" onClick={toggleMenu} className="hover:text-blue-600">Interview Preparation</Link></li>
               <li><Link href="/about-us" onClick={toggleMenu} className="hover:text-blue-600">About</Link></li>
