@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { jobsData } from '@/data/Jobpage';
 import GlobalCategories from '@/components/Categories/circle';
 import Script from 'next/script';
-
+import SubscribeMail from '@/components/Subscribe/subscribe';
 // For static generation
 export function generateStaticParams() {
     return Object.keys(jobsData).map((slug) => ({ slug }));
@@ -76,6 +76,7 @@ const categories = [
 ]
 
 export default function JobProfilePage({ params }) {
+
     const job = jobsData[params.slug];
     if (!job) return notFound();
 
@@ -263,10 +264,7 @@ export default function JobProfilePage({ params }) {
                             <div className='p-2'>
                                 <h2 className='text-4xl'>Subscribe to our Newsletter!</h2>
                                 <p className='text-md text-gray-400'>Get all updates from Jobhub world</p>
-                                <form className='p-4'>
-                                    <input type='email' placeholder='Get Latest Newsletter from JobHub world' className='w-full p-3  rounded-lg outline-lime-300 border' />
-                                    <button type='submit' className='text-2xl bg-green-400 p-2 rounded-lg mt-3 '>Subscribe News</button>
-                                </form>
+                                <SubscribeMail />
                             </div>
                         </div>
                     </div>

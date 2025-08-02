@@ -170,8 +170,8 @@ function page() {
                             Join thousands of candidates who’ve found their path through guided support, smart tools, and a team that genuinely cares.
                         </p>
                         <a
-                            href="/contact"
-                            className="inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-700 transition"
+                            href="/contact-us"
+                            className="inline-block bg-green-800 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-700 transition"
                         >
                             Get in Touch with Us
                         </a>

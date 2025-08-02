@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Toast from "./Toast/Snackbar";
+import emailjs from "@emailjs/browser"
 import { useRef, useState } from "react";
 
 const Footer = () => {
