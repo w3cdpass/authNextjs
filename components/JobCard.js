@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 export default function JobCard({ job }) {
   const [message, setMessage] = useState('');
+  const [showMore, setShowMore] = useState(false)
 
   const handleApply = async () => {
     setMessage('');
@@ -91,12 +92,29 @@ export default function JobCard({ job }) {
         </div>
       </div>
 
-      {job.description && (
-        <div className="mt-4">
-          <span className="font-medium text-gray-700">Job Description:</span>
-          <p className="text-gray-600 mt-1">{job.description}</p>
-        </div>
-      )}
+      <div className="mt-4">
+        <span className="font-medium text-gray-700">Job Description:</span>
+        {job.description.length > 190 ? (
+          showMore ? (
+            <p onClick={() => setShowMore(false)}>
+              {job.description}{" "}
+              <span className="text-xs bg-green-300 px-1 py-0.5 font-medium rounded-lg cursor-pointer">
+                Read Less
+              </span>
+            </p>
+          ) : (
+            <p onClick={() => setShowMore(true)}>
+              {job.description.slice(0, 190)}
+              <span className="text-xs bg-green-300 px-1 py-0.5 font-medium rounded-lg cursor-pointer">
+                Read More
+              </span>
+            </p>
+          )
+        ) : (
+          <p>{job.description}</p>
+        )}
+      </div>
+
 
       <div className="mt-6 flex justify-between items-center">
         <div>
@@ -108,7 +126,7 @@ export default function JobCard({ job }) {
 
         <button
           onClick={handleApply}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+          className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
         >
           Apply Now
         </button>

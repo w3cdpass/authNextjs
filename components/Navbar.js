@@ -58,15 +58,15 @@ const location = usePathname();
 
           {/* Desktop Admin Link */}
           <div className="hidden xl:flex items-center">
-            <Link href="/admin" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/admin' ? `text-green-600` : ``}`}>
-              Admin Login
+            <Link href="/candidatesignup" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/admin' ? `text-green-600` : ``}`}>
+              Candidate Form
             </Link>
           </div>
 
           {/* Mobile Menu Toggle + Admin */}
           <div className="xl:hidden flex items-center gap-4">
-            <Link href="/admin" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/admin' ? `text-green-600` : `text-black`}`}>
-              Admin Login
+            <Link href="/candidatesignup" className={`hover:text-green-600 hover:border-b-2 border-black ${location ==='/admin' ? `text-green-600` : `text-black`}`}>
+              Candidate Form
             </Link>
             <button
               onClick={toggleMenu}
